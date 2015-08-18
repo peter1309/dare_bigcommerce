@@ -1,3 +1,14 @@
+%%Panel.SignUpScript%%
 <div id="SignupArea">
-    
+    <h2>Signup & get $30 off your next order</h2>
+    <form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" onsubmit="return check_signup_form()">
+        <div class="FormContainer">
+            <fieldset>
+                <input type="email" title="" class="Textbox InitialFocus" name="signup" id="signup" placeholder="%%LNG_EmailAddress%%" />
+            </fieldset>
+            <fieldset class="actions">
+                <input id="SignupButton" class="btn alt" type="submit" value="SIGN UP" />
+            </fieldset>
+        </div>
+    </form>
 </div>

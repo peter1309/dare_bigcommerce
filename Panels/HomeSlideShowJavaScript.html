@@ -1,12 +1,22 @@
 <script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
-        $('.slide-show').flexslider({
+        $('#slider').flexslider({
             slideshowSpeed: $('.slide-show').attr('data-swap-frequency') * 1000,
             animation: "slide",
             pauseOnHover: true,
             controlNav: true,
             directionNav: true
+        });
+        $('#product-slider').flexslider({
+            slideshowSpeed: $('.slide-show').attr('data-swap-frequency') * 1500,
+            animation: "swing",
+            pauseOnHover: true,
+            controlNav: true,
+            itemWidth: 280,
+            itemMargin: 10,
+            maxItems: 4,
+            move: 1
         });
     });
 </script>

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function check_signup_form() {
+        var signup = g("signup");
+
+        if(signup.value.indexOf("@") == -1 || signup.value.indexOf(".") == -1) {
+            alert("%%LNG_LoginEnterValidEmail%%");
+            signup.focus();
+            signup.select();
+            return false;
+        }
+        return true;
+    }
+    //]]>
+</script>
