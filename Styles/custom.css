@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+@font-face {
+    font-family: "Lato Black";
+    src: url('Lato-Black.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Black.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Lato-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 .TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner{ max-width:1182px;}
 
 /*Style header*/
@@ -87,13 +92,13 @@
 #SignupArea{
     display: inline-block;
     position: relative;
-    /*text-align: center;*/
     width: 100%;
     height: 197px;
     z-index: 0;
+    margin: 50px 0;
 }
 #SignupArea:before{
-    background-color: #000;
+    background: #000 url(../images/bg-signup.jpg) no-repeat center center;
     bottom: 0;
     content: "";
     height: 100%;
@@ -104,9 +109,37 @@
     z-index: -1;
     top: 0;
 }
+#SignupArea h2{ width: 44%; float: left; margin: 60px 0 0; color: #fff; font-size: 36px; line-height: 36px; font-weight: 700; margin-left: 6%;}
+#SignupArea form{ width: 50%; float: left; margin-top: 80px;}
+#SignupArea form input#signup{color: #fff; font-size: 15px; font-family: 'Lato', sans-serif; font-weight: 300; background-color: transparent; border: none; border-bottom: 1px solid #fff; width: 320px; padding: 0 10px; height: 40px; line-height: 40px; float: left;}
+#SignupArea form .btn.alt{ border: 1px solid #fff; color: #fff; font-weight: 700; font-size: 13px; height: 40px; padding: 0 20px;}
 .main { overflow-x: hidden;}
 .Content { overflow: inherit;}
 
+/*Feature Product*/
+#HomeFeaturedProducts{ width: 100%; float: left; position: relative; margin-top: 10px;}
+#HomeFeaturedProducts h3{ text-align: center; font-size: 30px; font-family: "Lato", sans-serif; font-weight: 900;}
+
+
 /*Footer*/
+.social-links{ border-bottom: 1px solid #000; padding: 0; position: relative;}
+.social-links h3{ padding:0 0 30px 0; font-size: 36px; font-family: "Lato", sans-serif; font-weight: 900; }
+.social-links #socnet{ position: absolute; top: 0; right:0;}
+.footer-columns{ margin-top: 35px;}
+
+/*---- MENU TOP
+-------------------------------*/
+.PageMenu{padding-left: 250px;margin: 0;}
+.PageMenu ul{width: 100%;vertical-align: top;}
+.PageMenu .sf-menu li{float: left;width: 12.5%;margin: 0;text-align: center;padding: 0 5px;box-sizing: border-box;-webkit-box-sizing: border-box;}
+.PageMenu .sf-menu > li > a{font: 900 15px 'lato';line-height: 18px;color: #fff;padding: 92px 0 26px;background: url(../images/menu-ic-sprites.png) no-repeat;background-size: 713px auto;}
+.PageMenu .sf-menu > li:first-child > a{background-position: 30px -273px;}
+.PageMenu .sf-menu > li:nth-child(2) > a{background-position: -65px -273px;}
+.PageMenu .sf-menu > li:nth-child(3) > a{background-position: -159px -273px;}
+.PageMenu .sf-menu > li:nth-child(4) > a{background-position: -245px -273px;}
+.PageMenu .sf-menu > li:nth-child(5) > a{background-position: -340px -273px;}
+.PageMenu .sf-menu > li:nth-child(6) > a{background-position: -442px -273px;}
+.PageMenu .sf-menu > li:nth-child(7) > a{background-position: -539px -273px;}
+.PageMenu .sf-menu > li:nth-child(8) > a{background-position: -644px -273px;}
 
 

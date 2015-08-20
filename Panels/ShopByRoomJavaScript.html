@@ -1,17 +1,15 @@
-%%GLOBAL_jQueryPath%%
 <script type="text/javascript">
     //<![CDATA[
-    function show_product() {
-
-    }
-    $('#product-slider').flexslider({
-        slideshowSpeed: $('.slide-show').attr('data-swap-frequency') * 1500,
-        animation: "swing",
-        pauseOnHover: true,
-        itemWidth: 160,
-        itemMargin: 10,
-        maxItems: 4,
-        move: 1
+    $(document).ready(function(){
+        $("#slider-shopby").load("http://peter-balanceinternet.mybigcommerce.com/root/ladies .ProductList");
+        $('#ShopByRoom ul li').find('ul').remove();
+        $('#ShopByRoom ul li').find('a').each(function(){
+            $(this).attr('href','javascript:void(0)');
+            $(this).click(function(){
+                var categoryName = $(this).text().toLowerCase().trim();
+                $('#slider-shopby').load('http://peter-balanceinternet.mybigcommerce.com/root/'+categoryName+'/'+ ' .ProductList');
+            });
+        });
     });
     //]]>
 </script>
