@@ -52,8 +52,8 @@ var productId = %%GLOBAL_ProductId%%;
                 <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
                     <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
                 </div>
-                %%GLOBAL_PinterestButton%%
             </div>
+            %%Panel.SideProductRelated%%
         </div>
         <!-- Product Details Content -->
         <div class="ProductMain">
@@ -94,23 +94,13 @@ var productId = %%GLOBAL_ProductId%%;
             </div>
 
             %%GLOBAL_FacebookLikeButtonAbove%%
-            %%Panel.ProductTabs%%
             %%SNIPPET_ProductAddToCartRight%%
             %%SNIPPET_ProductExpectedReleaseDate%%
             %%GLOBAL_AddThisLink%%
+            %%Panel.ProductTabs%%
         </div>
 
         %%SNIPPET_ProductAddToCartBelow%%
-
-        <div id="prodAccordion">
-            %%Panel.ProductDescription%%
-            %%Panel.ProductVideos%%
-            %%Panel.ProductWarranty%%
-            %%Panel.ProductOtherDetails%%
-            %%Panel.SimilarProductsByTag%%
-            %%Panel.ProductReviews%%
-            %%Panel.ProductByCategory%%
-        </div>
 
     </div>
 </div>

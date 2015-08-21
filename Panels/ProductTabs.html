@@ -1,22 +1,46 @@
 %%GLOBAL_ProductTabsControlScript%%
 <div class="Panel" id="ProductTabs">
-	<script type="text/javascript">
-		lang.Description = '%%LNG_JS_Description%%';
-		lang.Warranty = '%%LNG_JS_Warranty%%';
-		lang.OtherDetails = '%%LNG_JS_OtherDetails%%';
-		lang.ProductTags = '%%LNG_JS_Tags%%';
-		lang.SimilarProducts = '%%LNG_JS_SimilarProducts%%';
-		lang.Reviews = '%%LNG_JS_Reviews%%';
-		lang.OtherProducts = '%%LNG_JS_OtherProducts%%';
-		lang.ProductVideos = '%%LNG_JS_ProductVideos%%';
-		lang.SimilarProductsByCustomerViews = '%%LNG_JS_SimilarProductsByCustomerViews%%';
-	</script>
-	
-	<!-- Remove the code from here to create the no product tabs version of the product page
-		<ul class="TabNav" id="ProductTabsList">
-		</ul>
-		<script language="javascript" type="text/javascript">//<![CDATA[
-			var HideProductTabs = 0;
-		//]]></script>
-	 -->
+    <script type="text/javascript">
+        lang.Description = '%%LNG_JS_Description%%';
+        lang.Warranty = '%%LNG_JS_Warranty%%';
+        lang.OtherDetails = '%%LNG_JS_OtherDetails%%';
+        lang.ProductTags = '%%LNG_JS_Tags%%';
+        lang.SimilarProducts = '%%LNG_JS_SimilarProducts%%';
+        lang.Reviews = '%%LNG_JS_Reviews%%';
+        lang.OtherProducts = '%%LNG_JS_OtherProducts%%';
+        lang.ProductVideos = '%%LNG_JS_ProductVideos%%';
+        lang.SimilarProductsByCustomerViews = '%%LNG_JS_SimilarProductsByCustomerViews%%';
+    </script>
+    <ul class="TabNav" id="ProductTabsList">
+        <li><a href="javascript:void(0)">Description</a></li>
+        <li><a href="javascript:void(0)">Shipping</a></li>
+        <li><a href="javascript:void(0)">Showrooms</a></li>
+    </ul>
+    <div id="tabs-content">
+        %%Panel.ProductDescription%%
+        %%Panel.OurShowRooms%%
+    </div>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function(){
+            $('#tabs-content .showrooms-links').hide();
+            $('#ProductTabsList li').on('click', function(){
+                var tab = $(this).text().toLowerCase().trim();
+                $('#ProductTabsList li').removeClass('open');
+                if( tab == 'description'){
+                    $(this).addClass('open');
+                    $('#tabs-content .showrooms-links').fadeOut();
+                    $('#ProductDescription').fadeIn();
+                }
+                else if(tab == 'shipping') {
+                    $(this).addClass('open');
+                }
+                else {
+                    $(this).addClass('open');
+                    $('#ProductDescription').fadeOut();
+                    $('#tabs-content .showrooms-links').fadeIn();
+                }
+            });
+        });
+
+    </script>
 </div>
