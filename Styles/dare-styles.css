@@ -1,0 +1,15 @@
+.productPage #CategoryDrivers ul > li:nth-child(3),
+.productPage #CategoryDrivers ul > li:nth-child(4),
+.productPage #x3-row { display : none;}
+.productPage #PromArea { border-top : none;}
+.productPage .addto .BulkDiscount,
+.productPage .addto #SideProductAddToWishList {width : 100%;display : block;}
+.productPage .PrimaryProductDetails .btn.add-to-cart,
+.productPage .addto #SideProductAddToWishList input { width : 100%;}
+.productPage .left-content { width : 65%;}
+.productPage .PrimaryProductDetails .ProductMain { width : 34%;padding : 0;}
+.productPage .PrimaryProductDetails .btn.add-to-cart {font-family: 'Montserrat', sans-serif;font-size : 18px;font-weight : 700;color : #fff;background-color : #000000;min-height : 50px;}
+.productPage .addto #SideProductAddToWishList input {font-family: 'Montserrat', sans-serif;font-size : 14px;font-weight : 400;color : #242424;min-height : 50px;}
+.productPage .addto {border-top : none;}
+.productPage #ProductDetails h1 { color : #222222;font-family: 'Montserrat', sans-serif;font-size : 60px;font-weight : 400;text-transform : capitalize;line-height : 60px; letter-spacing : -2px; }
+.productPage #SideProductRelated h2 {color : #000000;font-size : 30px;font-weight : 900;}

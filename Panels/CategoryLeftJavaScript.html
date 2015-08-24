@@ -1,0 +1,342 @@
+<script src="%%ASSET_js/searchspring-catalog.min.js%%"></script>
+<script type="text/javascript">
+    var SearchSpringConf = function() {
+        return {"layout":"","result_layout":"grid","results_per_page":30,"key":"e27da8ef6f5cf5f21b2901349188a0a2","id":"nj4zjd","css":"8481056df570b31ec0e7f50c0ecee73720606476"}
+    }();
+</script>
+<script type="text/javascript">
+
+
+var sizes = {
+    "plus": ["1XL", "2XL", "3XL", "12", "14", "16", "18", "20", "22", "24"],
+    "junior": ["XS", "S", "M", "L", "XL", "XXL", "00", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "13", "15", "17", "19", "21", "23", "25", "26", "27", "28", "29", "30", "31", "32"],
+    "men": ["30W x 30L", "30W x 32L", "30W x 34L", "32W x 30L", "32W x 32L", "32W x 34L", "33W x 30L", "33W x 32L", "34W x 30L", "34W x 32L", "34W x 34L", "36W x 30L", "36W x 32L", "36W x 34L", "38W x 30L", "38W x 32L", "38W x 34L", "40W x 32L", "30", "32", "34", "36", "38", "40"]
+}
+
+
+var $$ = SearchSpring.jQuery;
+
+var do_once = false;
+
+var arr = [];
+
+$$('#CategoryBreadcrumb li').each(function(){
+    arr.push($$.trim($$(this).text().replace(/ +/g, ' ').replace(/&amp;/g, '&')));
+});
+
+arr.shift();
+
+var initOptions = {
+    backgroundSortField: 'sortable_date_created',
+    backgroundSortDir: 'desc',
+    backgroundFilters: { categories_hierarchy: arr.join(">") },
+    protectCartResults: true,
+    queryParam: 'search_query',
+    waitForReady: false,
+    filterText: 'Search Filters',
+    result_layout: 'grid',
+    maxFacetOptions: 12,
+    results_per_page: 24,
+    resultsPerPageText: 'Show: ',
+    maxFacetFieldOptions: {
+        size_color_hierarchy: 500,
+        color_size_hierarchy: 500
+    },
+    resultsPerPageType: 'dropdown',
+    sortText: 'Sort by:',
+    sortType: 'dropdown',
+    showSummary: true,
+    summaryText: 'Current Filters',
+    previousText: '« Previous',
+    nextText: 'Next »',
+    breadcrumbSeparator: '',
+    collapsedText: 'Show More...',
+    expandedText: 'Show Less...',
+    stickySlider: true,
+    template: 'minimal',
+    compareCallback: function() {
+        $$("#searchspring-compare_description .searchspring-compare_value").each(function() {
+            var desc = $$(this).text()
+            if (desc.length > 250) {
+                $$(this).before('<div class="searchspring-compare_value searchspring-compare_cell">' + desc.substr(0, 250) + '...</span></div>');
+                $$(this).hide();
+            }
+        });
+
+        // close compare modal when clicking anywhere outside of it
+        (function($$) {
+            // hide compare box
+            $$('#searchspring-compare_box').toggle();
+
+            $$('.ui-dialog-titlebar-close').click(function() {
+                $$('#searchspring-compare_box').show();
+            });
+
+            $$(".ui-widget-overlay").click(function() {
+                $$(".ui-dialog-titlebar-close").trigger("click");
+                $$('#searchspring-compare_box').show();
+            });
+        })(SearchSpring.jQuery);
+
+    },
+    afterResultsChange: function() {
+        if (!do_once) {
+            rearrange();
+            sssider_init(753);
+            do_once = true;
+        }
+        $$("#searchspring-main .pagination, #searchspring-main .pagination_label").toggle($$("#searchspring-main .pagination .searchspring-total_pages:first").text() != "1");
+        compare_init();
+        magic();
+        color_image();
+        //hides bottom and top pagination previous arrow if first page is selected, otherwise displays as inline-block instead of table-cell(default)
+        if ($$(".pagination .searchspring-pageSelect.highlight").text() == '11') {
+            $$(".searchspring-previous").css("display", "none");
+        }
+        else {
+            $$(".searchspring-previous").css("display", "inline-block");
+        }
+        //getting a weird bug where the .per-page .uniform selector is being duplicated...this removes the second one if it exists
+        $$(".per-page div:nth-child(2)").remove();
+        bc_connect();
+    }
+
+}
+
+
+SearchSpring.Catalog.init(initOptions);
+
+var sssiderWidth = 767;
+
+function sssider_init(resWidth) {
+    sssiderWidth = resWidth;
+    $$('<div id="searchspring-sider"><div class="searchspring-sider_button"><a></a></div></div><div class="sssider-overlay"></div>').appendTo($$('body'));
+    $$('<div class="searchspring-filter_button" id="ss-filter-button"><span class="searchspring-sider_button_icon"></span><span class="searchspring-sider_button_text">Filter Options</span></div>').prependTo($$('#searchspring-options'));
+    $$('#searchspring-sider .searchspring-sider_button, #searchspring-main .searchspring-filter_button, .sssider-overlay').click(sssider_toggleSider);
+    sssider_checkMobile();
+    $$(window).resize(sssider_checkMobile);
+}
+
+function sssider_checkMobile() {
+    if ($$(window).width() <= sssiderWidth ) {
+        $$('#searchspring-sidebar').detach().appendTo('#searchspring-sider');
+    } else {
+        $$('#searchspring-sidebar').detach().appendTo('.searchspring-facets_container');
+        $$('#searchspring-sider, .sssider-overlay').removeClass('sider-show');
+    }
+}
+
+function sssider_toggleSider() {
+    $$('#searchspring-sider, .sssider-overlay').toggleClass('sider-show');
+}
+
+
+function compare_init() {
+    // add on click to display compare box when products added / removed
+    $$('#searchspring-search_results .item .ss-compare label').click(function() {
+        $$('#searchspring-compare_box').addClass('showme');
+        setTimeout(function() {
+            $('#searchspring-compare_box').removeClass('showme');
+        }, 1440);
+    });
+
+    //hack to associate uniform checkbox id with compare image container ids
+    $$(".searchspring-compare_image_container").hover(function() {
+        if ($$(this).find("div").length > 0) {
+            var id = $(this).find("div").attr("id").replace(/del_/, '');
+            $$(this).attr("data-id", id);
+        }
+    }, function() {})
+
+    //unchecking those pesky uniform compare checkboxes when they're removed from the compare box, compare box was sticking around so i hid it on click as well
+    $$(".searchspring-compare_image_container").click(function() {
+        $$("#uniform-" + $$(this).attr("data-id") + " span").removeClass("checked");
+        if ($$("#searchspring-compare_image_container1 div").length == 0) {
+            $$("#searchspring-compare_box").hide();
+        }
+    });
+    $$(".ss-compare label").click(function() {
+        if ($$("#searchspring-compare_image_container1 div").length == 0) {
+            $$("#searchspring-compare_box").hide();
+        }
+    })
+}
+
+function rearrange() {
+    // hide pagination if one page
+    $$("<div class='ss-bottom_options'></div>").insertAfter("#searchspring-options");
+    $$(".sort-by").appendTo(".ss-bottom_options");
+    $$(".pagination.top").appendTo(".ss-bottom_options");
+    $$(".breadcrumbs").insertBefore("#searchspring-options");
+}
+
+function bc_connect() {
+    $('input[type=checkbox], input[type=radio], select').not('.UniApplied').uniform();
+    $(".QuickView").quickview({
+        buttonText: "Quick View",
+        buttonColor: "#ffffff",
+        gradientColor: "#f8d1c0",
+        textColor: "#000000"
+    });
+}
+
+//hides non web-safe palettes
+function webSafe() {
+    $$("#searchspring-facets .facet_container.palette li a").each(function() {
+        if ($$(this).attr("style")) {
+            $$(this).closest("li").addClass("websafe");
+        } else {
+            $$(this).closest("li").addClass("not-websafe");
+        }
+    });
+}
+
+//color_size + size_color magic
+function magic() {
+    var color_size_hierarchy = SearchSpring.Catalog.request['filter.color_size_hierarchy'];
+    var size_color_hierarchy = SearchSpring.Catalog.request['filter.size_color_hierarchy'];
+
+    if (color_size_hierarchy) {
+        color_size_hierarchy = color_size_hierarchy.split('/');
+
+        if (color_size_hierarchy.length > 1) {
+            $$("#searchspring-color_size_hierarchy_container .filtered_link:first-child").text("« View All Colors");
+            $$("#searchspring-color_size_hierarchy_container .filtered_link + .filtered_link").text("« View All Sizes");
+            grid($$("#searchspring-color_size_hierarchy_container .filtered_current"));
+        } else {
+            $$("#searchspring-color_size_hierarchy_container .filtered_link:first-child").text("« View All Colors");
+
+            $$("#searchspring-color_size_hierarchy_container .filtered_current ~ li").each(function () {
+                grid($$(this));
+            });
+
+            size($$("#searchspring-color_size_hierarchy_container .filtered_current ~ li"));
+
+            palette($$("#searchspring-color_size_hierarchy_container .filtered_current"));
+        }
+
+        $$("#searchspring-size_color_hierarchy_container").hide();
+    } else if (size_color_hierarchy) {
+        size_color_hierarchy = size_color_hierarchy.split('/');
+
+        if (size_color_hierarchy.length > 1) {
+            $$("#searchspring-size_color_hierarchy_container .filtered_link:first-child").text("« View All Sizes");
+            $$("#searchspring-size_color_hierarchy_container .filtered_link + .filtered_link").text("« View All Colors");
+            palette($$("#searchspring-size_color_hierarchy_container .filtered_current"));
+        } else {
+            $$("#searchspring-size_color_hierarchy_container .filtered_link:first-child").text("« View All Sizes");
+
+            $$("#searchspring-size_color_hierarchy_container .filtered_current ~ li").each(function () {
+                palette($$(this));
+            });
+
+            grid($$("#searchspring-size_color_hierarchy_container .filtered_current"));
+        }
+
+        $$("#searchspring-color_size_hierarchy_container").hide();
+    } else {
+        $$("#searchspring-color_size_hierarchy_container li").each(function () {
+            palette($$(this));
+        });
+
+        $$("#searchspring-size_color_hierarchy_container li").each(function () {
+            grid($$(this));
+        });
+
+        size($$("#searchspring-size_color_hierarchy_container ul li"));
+    }
+
+    $$("#searchspring-size_color_hierarchy_container .facet_title").text(color_size_hierarchy ? "Color" : "Size");
+    $$("#searchspring-color_size_hierarchy_container .facet_title").text(size_color_hierarchy ? "Size": "Color")
+}
+function size(x) {
+    var content = "<div class='size plus'><h3>Plus</h3><ul /></div><div class='size men'><h3>Men</h3><ul /></div><div class='size junior'><h3>Junior</h3><ul /></div>";
+
+    if (x.siblings(".filtered_current").length == 0) {
+        x.parents("ul.element_container").prepend(content);
+    } else {
+        x.siblings(".filtered_current").after(content);
+    }
+
+    x.each(function(){
+        var a = $$(this).text();
+        if ($$.inArray(a, sizes["plus"]) >= 0) {
+            x.siblings(".size.plus").find("ul").append($$(this));
+        } else if ($$.inArray(a, sizes["men"]) >= 0) {
+            x.siblings(".size.men").find("ul").append($$(this));
+        } else if ($$.inArray(a, sizes["junior"]) >= 0) {
+            x.siblings(".size.junior").find("ul").append($$(this));
+        }
+    });
+
+    sort($$("#searchspring-sidebar div.size.plus ul"));
+    sort($$("#searchspring-sidebar div.size.men ul"));
+    sort($$("#searchspring-sidebar div.size.junior ul"));
+
+    $$("#searchspring-sidebar div.size").each(function(){
+        $$(this).toggle($$(this).find("li").length > 0);
+    });
+
+}
+
+function palette(x) {
+    var w, y = $$(x).find("a");
+    if(y.length > 0){
+        $$(x).find("a span").remove();
+        w = y;
+    } else {
+        w = $$(x);
+    }
+
+    $$(x).find("a").text($$.trim($$(x).find("a").text()));
+
+    var t = w.text();
+
+    w.attr("alt", t).attr("title", t);
+    $$(x).addClass("palette");
+
+    (t != "Black & White") ? w.css("background-color", (t == "Brown") ? "#8B4513" : (t == "Beige") ? "#DEB887" : t) : w.css("background-image", "url('//cdn.searchspring.net/ajax_search/sites/nj4zjd/img/black&white.png')");
+}
+
+function grid(x) {
+    var y = $$(x).find("a");
+    if(y.length > 0){
+        $$(x).find("a span").remove();
+    }
+    $$(x).find("a").text($$.trim($$(x).find("a").text()));
+    $$(x).addClass("grid");
+}
+
+function sort(u) {
+    var li = u.children("li").get();
+    var c = (u.parent().hasClass("plus")) ? "plus" : "junior";
+    var arr = sizes[c];
+    li.sort(function(a, b) {
+        return $$.inArray($$(a).text(), arr) > $$.inArray($$(b).text(), arr);
+    });
+    $$.each(li, function(idx, itm) { u.append(itm); });
+}
+
+function color_image() {
+    var color_size_hierarchy = SearchSpring.Catalog.request['filter.color_size_hierarchy'];
+    var size_color_hierarchy = SearchSpring.Catalog.request['filter.size_color_hierarchy'];
+
+    var color = (color_size_hierarchy) ? color_size_hierarchy.split("/")[0] : ((size_color_hierarchy) ? size_color_hierarchy.split("/")[1] : null);
+
+    if (color) {
+        $$("#searchspring-search_results .item").each(function() {
+            var colors = {};
+            var cs = $$(this).attr("colors").split("|");
+
+            for (var i = 0; i < cs.length; i++) {
+                var c = cs[i].split(":");
+                colors[c[0].replace(/ /g, "")] = "//www.fashion2love.net/product_images/uploaded_images/" + c[1];
+            }
+
+            if (colors[color]) {
+                $$(this).find(".ProductImage img").attr("src", colors[color]);
+            }
+        });
+    }
+}
+</script>

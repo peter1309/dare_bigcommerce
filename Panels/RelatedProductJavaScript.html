@@ -1,13 +1,18 @@
-<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
-        $('#related-product-slider').flexslider({
-            animation: "swing",
-            pauseOnHover: true,
-            itemWidth: 250,
-            itemMargin: 10,
-            maxItems: 3,
-            move: 1
+        $('#related-product-slider .slides').owlCarousel({
+            itemsCustom : [
+                [0, 2],
+                [1200, 3]
+            ],
+            pagination : false,
+            autoPlay : true,
+            navigation : true,
+            navigationText: [
+                "<i class='flex-prev'><</i>",
+                "<i class='flex-next'>></i>"
+            ],
+            stopOnHover : true
         });
     });
 </script>
