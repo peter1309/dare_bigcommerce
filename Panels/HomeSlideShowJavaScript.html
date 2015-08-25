@@ -9,32 +9,38 @@
             directionNav: true
         });
         $('#product-slider .slides').owlCarousel({
-            itemsCustom : [
-                [0, 2],
-                [700, 4],
-                [1200, 6]
-            ],
-            navigation : true,
-            navigationText: [
-                "<i class='flex-prev'><</i>",
-                "<i class='flex-next'>></i>"
-            ],
-            pagination : false,
-            stopOnHover : true
+            items: 6,
+            nav: true,
+            loop: true,
+            lazyLoad: true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:4
+                },
+                1025:{
+                    items:6
+                }
+            }
         });
         $('#slider-shopby .ProductList').owlCarousel({
-            itemsCustom : [
-                [0, 2],
-                [700, 4],
-                [1200, 6]
-            ],
-            navigation : true,
-            navigationText: [
-                "<i class='flex-prev'><</i>",
-                "<i class='flex-next'>></i>"
-            ],
-            pagination : false,
-            stopOnHover : true
+            items: 6,
+            nav: true,
+            loop: true,
+            lazyLoad: true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:4
+                },
+                1025:{
+                    items:6
+                }
+            }
         });
     });
-</script>
+</script>​

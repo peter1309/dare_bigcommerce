@@ -23,6 +23,7 @@
     <script language="javascript" type="text/javascript">
         $(document).ready(function(){
             $('#tabs-content .showrooms-links').hide();
+            $('#ProductTabsList li:first-child').addClass('open');
             $('#ProductTabsList li').on('click', function(){
                 var tab = $(this).text().toLowerCase().trim();
                 $('#ProductTabsList li').removeClass('open');

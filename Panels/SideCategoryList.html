@@ -6,3 +6,31 @@
         </div>
     </div>
 </div>
+<div id="rss-ladies" style="display: none"></div>
+<div id="rss-mens" style="display: none"></div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var ladies = $('#Header #SideCategoryListFlyout ul li:first-child a');
+        var mens = $('#Header #SideCategoryListFlyout ul li:nth-child(2) a');
+        var baseLink = '%%GLOBAL_ShopPath%%';
+        var queryRSS = baseLink+'/rss.php?action=featuredproducts&categoryid=';
+        if(ladies != undefined){
+            $('#rss-ladies').load(queryRSS+'3');
+        }
+        if(mens != undefined){
+            $('#rss-mens').load(queryRSS+'1');
+        }
+        var condition = [element.text().trim().toLowerCase()];
+        $.each(condition,function (i, val) {
+            console.log(val);
+            if(val == 'ladies' && element != undefined){
+                queryRSS = queryRSS + '3';
+                $('#rss-ladies').load(queryRSS);
+            }
+            if(val == 'mens' && element != undefined){
+                queryRSS = queryRSS + '1';
+                $('#rss-mens').load(queryRSS);
+            }
+        });
+    });
+</script>

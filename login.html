@@ -8,7 +8,7 @@
                     %%Panel.WrapperBanner%%
                     <div class="Content Widest" id="LayoutColumn1">
                         %%Panel.LoginBreadcrumb%%
-                        <h1 class="TitleHeading">Sign in or Create Account</h1>
+                        <h1 class="TitleHeading">Login or Create Account</h1>
                         %%Panel.LoginForm%%
                     </div>
                     <div class="clear"></div>
@@ -18,3 +18,8 @@
         </div>
     </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.AccountLogin .actions').find('#LoginButton').attr('value','Login');
+    });
+</script>​

@@ -2,34 +2,42 @@
     //<![CDATA[
     $(document).ready(function(){
         var baseLink = '%%GLOBAL_ShopPath%%';
-        $("#slider-shopby").load(baseLink+'/root/ladies .ProductList');
+        var activeLink = baseLink+'/root/mens';
+        $("#slider-shopby").load(baseLink+'/root/mens .ProductList');
+        $('#ShopByRoom .btn-view-cat').attr('href',activeLink);
+        $('#ShopByRoom ul li:nth-child(2)').addClass('active');
         $('#ShopByRoom ul li').find('ul').remove();
         $('#ShopByRoom ul li').find('a').each(function(){
             $(this).attr('href','javascript:void(0)');
             $(this).click(function(){
                 var categoryName = $(this).text().toLowerCase().trim();
+                var currentLink = baseLink+'/root/'+categoryName;
+                $('#ShopByRoom ul li').removeClass('active');
+                $(this).parent().addClass('active');
+                $(this).parent().parent().parent().find('a.btn-view-cat').attr('href',currentLink);
                 $('#slider-shopby').load(baseLink+'/root/'+categoryName+'/'+ ' .ProductList');
                 setTimeout(function(){
                     $('#slider-shopby .ProductList').owlCarousel({
-                        itemsCustom : [
-                            [0, 2],
-                            [700, 4],
-                            [1200, 6]
-                        ],
-                        navagation : true,
-                        navigationText: [
-                            "<i class='flex-prev'><</i>",
-                            "<i class='flex-next'>></i>"
-                        ],
-                        lazyLoad : true,
-                        pagination : false,
-                        stopOnHover : true
+                        items: 6,
+                        nav: true,
+                        loop: true,
+                        lazyLoad: true,
+                        responsive:{
+                            0:{
+                                items:2
+                            },
+                            768:{
+                                items:4
+                            },
+                            1025:{
+                                items:6
+                            }
+                        }
                     });
                 },500);
-
             });
 
         });
     });
     //]]>
-</script>
+</script>​

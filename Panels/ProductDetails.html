@@ -41,13 +41,13 @@ var productId = %%GLOBAL_ProductId%%;
                 %%GLOBAL_LightBoxImageJavascript%%
                 %%SNIPPET_ProductThumbImage%%
                 <div class="ImageCarouselBox clearfix" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
-                    <a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" alt="" width="20" height="20" /></a>
+                    <a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" /></a>
                     <div class="ProductTinyImageList">
                         <ul>
                             %%SNIPPET_ProductTinyImages%%
                         </ul>
                     </div>
-                    <a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" alt="" width="20" height="20" /></a>
+                    <a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" /></a>
                 </div>
                 <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
                     <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
@@ -68,14 +68,12 @@ var productId = %%GLOBAL_ProductId%%;
                 </div>
                 <div class="DetailRow PriceRow p-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="%%GLOBAL_HidePrice%%">
                     <div class="Value">
+                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
                         <span class="ProductPrice RetailPrice">%%GLOBAL_RetailPrice%%</span>
+                        <span class="s-price">%%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%</span>
                         <meta itemprop="priceCurrency" content="%%GLOBAL_CurrentCurrencyCode%%">
                         <meta itemprop="price" content="%%GLOBAL_RawProductPrice%%">
-                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
                     </div>
-                </div>
-                <div class="s-price">
-                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
                 </div>
                 <div class="DetailRow product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" style="display: %%GLOBAL_HideRating%%">
                     <div class="Value">
@@ -121,4 +119,4 @@ var productId = %%GLOBAL_ProductId%%;
             stopOnHover : true
         });
     });
-</script>
+</script>​
