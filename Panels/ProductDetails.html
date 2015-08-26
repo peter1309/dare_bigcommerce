@@ -55,6 +55,41 @@ var productId = %%GLOBAL_ProductId%%;
             </div>
             %%Panel.SideProductRelated%%
         </div>
+        <div class="left-content-mobile">
+            <div class="DetailRow product-heading">
+                <div class="Value" style="display: %%GLOBAL_HideBrandLink%%" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                    <h4 class="BrandName"><a itemprop="url" href="%%GLOBAL_BrandLink%%"><span itemprop="name">%%GLOBAL_BrandName%%</span></a></h4>
+                </div>
+                <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
+            </div>
+            <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
+                %%GLOBAL_LightBoxImageJavascript%%
+                %%SNIPPET_ProductThumbImage%%
+                <div class="ImageCarouselBox clearfix" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
+                    <a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" /></a>
+                    <div class="ProductTinyImageList">
+                        <ul>
+                            %%SNIPPET_ProductTinyImages%%
+                        </ul>
+                    </div>
+                    <a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" /></a>
+                </div>
+                <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
+                    <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
+                </div>
+            </div>
+            <div class="DetailRow PriceRow p-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="%%GLOBAL_HidePrice%%">
+                <div class="Value">
+                    <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
+                    <span class="ProductPrice RetailPrice">%%GLOBAL_RetailPrice%%</span>
+                    <span class="s-price">%%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%</span>
+                    <meta itemprop="priceCurrency" content="%%GLOBAL_CurrentCurrencyCode%%">
+                    <meta itemprop="price" content="%%GLOBAL_RawProductPrice%%">
+                </div>
+            </div>
+            %%SNIPPET_ProductAddToCartRight%%
+            %%GLOBAL_AddThisLink%%
+        </div>
         <!-- Product Details Content -->
         <div class="ProductMain">
             <div class="ProductDetailsGrid">
@@ -96,6 +131,10 @@ var productId = %%GLOBAL_ProductId%%;
             %%SNIPPET_ProductExpectedReleaseDate%%
             %%GLOBAL_AddThisLink%%
             %%Panel.ProductTabs%%
+        </div>
+        <div class="ProductMain-Mobile">
+            %%Panel.ProductTabs%%
+            %%Panel.SideProductRelated%%
         </div>
 
         %%SNIPPET_ProductAddToCartBelow%%
