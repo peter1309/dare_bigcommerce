@@ -2,20 +2,25 @@
 .productPage #CategoryDrivers ul > li:nth-child(4),
 .productPage #x3-row { display : none;}
 .productPage #PromArea { border-top : none;}
-.productPage .addto .BulkDiscount,
+.productPage .addto .BulkDiscount, 
 .productPage .addto #SideProductAddToWishList {width : 100%;display : block;}
-.productPage .PrimaryProductDetails .btn.add-to-cart,
+.productPage .PrimaryProductDetails .btn.add-to-cart, 
 .productPage .addto #SideProductAddToWishList input { width : 100%;}
-.productPage .left-content { width : 65%;}
+.productPage .left-content { width : 63%;}
 .productPage .PrimaryProductDetails .ProductMain { width : 34%;padding : 0;}
 .productPage .PrimaryProductDetails .btn.add-to-cart {font-family: 'Montserrat', sans-serif;font-size : 18px;font-weight : 700;color : #fff;background-color : #000000;min-height : 50px;}
 .productPage .addto #SideProductAddToWishList input {font-family: 'Montserrat', sans-serif;font-size : 14px;font-weight : 400;color : #242424;min-height : 50px; border:1px solid #000;}
+.productPage .addto #SideProductAddToWishList:hover{ box-shadow: 2px 3px 0 0 #000;}
 .productPage .addto {border-top : none;}
 .productPage #ProductDetails h1 { color : #222222;font-family: 'Montserrat', sans-serif;font-size : 60px;font-weight : 400;text-transform : capitalize;line-height : 60px; letter-spacing : -2px; }
-.productPage #SideProductRelated h2 {color : #000000;font-size : 30px;font-weight : 900;}
+.productPage #SideProductRelated h2 {color : #000000;font-size : 30px;font-weight : 900; border-bottom: 4px solid #222;}
 .productPage .left-content .ProductList .ProductImage a { height : auto;}
+.productPage .PrimaryProductDetails .ProductPrice{ font-size: 18px; color: #222; font-family: "Lato",Arial,Sans-serif; font-weight:700;}
+.productPage .PrimaryProductDetails .RetailPrice{ font-size: 12px; color: #666; font-weight: 400;}
+.productPage .ProductDetailsGrid .s-price .YouSave{ text-transform: uppercase; color: #b33a2b; font-size: 14px; font-family: "Lato",Arial,Sans-serif; font-weight: 700;}
 .productPage .Breadcrumb li{ padding: 0 6px 0 0}
 .productPage .Breadcrumb li a{ padding-right: 10px;}
+.productPage div.selector{ background: #fff url(../images/icon_arrow_down.png) no-repeat 90% center !important;}
 .productPage .addthis_default_style .at4-icon{ width: 32px; height: 32px; background-size: 32px !important;}
 .productPage .TabNav{border-bottom: 1px solid #000;}
 .productPage .TabNav li a{ padding: 0 8px; background: none; border: none; text-transform: uppercase; color: #222; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400; position: relative}
@@ -33,7 +38,20 @@
     display:none;
 }
 .productPage .TabNav li:hover a::before, .productPage .TabNav li.open a::before{ display: block}
-.productPage #tabs-content{ color: #222; font-size: 12px; font-family:"Lato",Arial,Sans-serif; font-weight: 400;}
-.productPage #tabs-content strong{ text-transform: uppercase; font-weight: 700;}
+.productPage .ProductDescription{ color: #222; font-size: 12px; font-family:"Lato",Arial,Sans-serif; font-weight: 400; letter-spacing: 0.5px;}
+.productPage .ProductDescription strong{ text-transform: uppercase;}
 .productPage .productOptionPickListSwatch .swatchColours{ border: none !important; }
 .productPage .productOptionPickListSwatch .swatchColour{ width: 56px !important; height: 56px !important;}
+.productPage .ProductDetailsGrid .Label, .productPage .productAttributeList .productAttributeLabel label{ font-weight: 400; font-family: "Lato",Arial,Sans-serif; font-size: 12px; color: #666;}
+.productPage #ProductDetails .ProductTinyImageList ul li{ margin: 0 20px 0 0;}
+.productPage #ProductDetails .ProductTinyImageList ul li a{ border: 1px solid #e5e5e5; width: 108px; height: 108px;}
+.productPage #ProductDetails .ProductTinyImageList img{ height: 108px;}
+.productPage #ProductDetails .ProductTinyImageList ul li a:hover{ border: 1px solid #000;}
+.productPage #SideProductRelated{ padding-top:48px;}
+.productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{top: -66px;}
+.productPage #SideProductRelated .owl-nav .owl-prev{ left: auto; right: 8%;}
+.productPage #SideProductRelated .owl-nav .owl-next{ right: 0;}
+.productPage .ImageCarouselBox{ position: relative;}
+.productPage .ProductTinyImageList{ widht: 90%; margin: 0 5%;}
+.productPage #ImageScrollPrev{ position: absolute; left:0;}
+.productPage #ImageScrollNext{ position: absolute; right: 0;}

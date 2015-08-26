@@ -1,35 +1,36 @@
 %%Panel.HTMLHead%%
-<body>
-%%Panel.DrawerMenu%%
-<div class="page">
-    %%Panel.Header%%
-    <div class="main">
-        <div class="inner">
-            %%Panel.WrapperBanner%%
-            %%Panel.CategoryBreadcrumb%%
-            <div class="productlist-page">
-                <div class="Left fleft">
-                    <h3>Shop by</h3>
-                    %%SNIPPET_SubCategories%%
-                    <div class="searchspring-facets_container"></div>
-                    <div class="clear"></div>
-                    <!--%%Panel.SideCategoryShopByPrice%%-->
-                </div>
-                <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
-                    <div class="product-nav">
-                        %%Panel.CategoryHeading%%
-                        %%SNIPPET_CategorySortBox%%
-                        %%Panel.CategoryPagingTop%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <div class="page">
+            %%Panel.Header%%
+            <div class="main">
+                <div class="inner">
+                    %%Panel.WrapperBanner%%
+                    %%Panel.CategoryBreadcrumb%%
+                    <div class="productlist-page">
+                        <div class="Left fleft">
+                            <h3>Shop by</h3>
+                            %%SNIPPET_SubCategories%%
+                            %%Panel.SideCategoryShopByPrice%%
+                            <div class="searchspring-facets_container"></div>
+                            <div class="clear"></div>
+                            %%Panel.CategoryLeftJavaScript%%
+                        </div>
+                        <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
+                            <div class="product-nav">
+                                %%Panel.CategoryHeading%%
+                                %%SNIPPET_CategorySortBox%%
+                                %%Panel.CategoryPagingTop%%
+                                <div class="clear"></div>
+                            </div>
+                            %%Panel.CategoryContent%%
+                        </div>
                         <div class="clear"></div>
+                        %%Banner.BottomBanner%%
                     </div>
-                    %%Panel.CategoryContent%%
                 </div>
-                <div class="clear"></div>
-                %%Banner.BottomBanner%%
             </div>
+            %%Panel.Footer%%
         </div>
-    </div>
-    %%Panel.Footer%%
-</div>
-</body>
+    </body>
 </html>
