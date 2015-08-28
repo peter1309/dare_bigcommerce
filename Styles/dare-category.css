@@ -44,12 +44,13 @@
 }
 .productlist-page .banner-top-desc{
     width: 30%;
+    min-width: 265px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 16%;
     corlor: #fff;
     padding-right: 7.5% !important;
-    padding-top: 5% !important;
+    padding-top: 0 !important;
 }
 .productlist-page .banner-top-desc h1{
     font-family: 'Montserrat', sans-serif;
@@ -58,7 +59,7 @@
     color: #fff;
     text-transform: uppercase;    
     line-height: 52px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .productlist-page .banner-top-desc h1 span {
     display: block;
@@ -68,7 +69,7 @@
 }
 .productlist-page .banner-top-desc .banner-desc{
     color: #fff;    
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-family: "Lato",Arial,Sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -115,6 +116,106 @@
     background-color: #fff;
     box-shadow: none;
 }
+.productlist-page .CategoryPagination .PagingList li{
+    border: 1px solid #000;
+    height: 40px;
+    min-width: 40px;
+    display: inline-block;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 6px;
+}
+.productlist-page .CategoryPagination .PagingList li a{
+    font-size: 13px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    height: 40px;
+    min-width: 40px;    
+}
+.productlist-page .CategoryPagination a.nav-next,
+.productlist-page .CategoryPagination a.nav-prev{
+    background: transparent;
+    text-indent: 0;
+    border: 1px solid #000;
+    height: 40px;
+    min-width: 72px;
+    width: auto;
+    display: inline-block;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.productlist-page .CategoryPagination a.nav-prev{
+    margin: 0;
+}
+.productlist-page .CategoryPagination a.nav-next{
+    margin: 0 0 0 6px;
+}
+.productlist-page .product-nav.btm{
+    padding: 15px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 15px;
+}
+.productlist-page #CategoryPagingBottom{
+    float: right;
+}
+.productlist-page .CategoryPagination .PagingList li.ActivePage{
+    background: #000;
+    color: #fff;
+}
+.productlist-page .FloatRight.SortBox{
+    float: none;
+    clear: both;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+    padding-bottom: 15px;
+    text-align: right;
+}
+.productlist-page .SortBox div.selector{
+    margin-bottom: 0;
+}
+.productlist-page .SortBox label,
+.productlist-page .SortBox div.selector span{
+    color: #000;
+    font-family: "Lato",Arial,Sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: none;
+}
+.productlist-page .SortBox label{
+    display: inline-block;
+    float: none;
+}
+.productlist-page .banner_category_page_top{
+    margin-bottom: 15px;
+}
+.productlist-page .SubCategoryList .selector span:first-child{
+    margin-bottom: 0;
+}
+.productlist-page .SubCategoryList.mobile{
+    display: none !important;
+}
+
+
+
+
+
+
 
 
 
@@ -133,17 +234,113 @@
 
 }
 
-
 @media screen and (max-width: 1023px){
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .productlist-page .banner-top-desc{
+        top: 5%;
+    }
+    .productlist-page .banner-top-desc h1 span {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 768px){
+    .productlist-page .Left{
+        display: block;
+        float: left;
+    }
+    .productlist-page .Left .SubCategoryList{
+        display: block;
+    }
+
+}
 @media screen and (max-width: 767px){
     .productlist-page #LayoutColumn1{
         width: 100%;
         float: none;
     }
+    .productlist-page .banner-top-desc .banner-desc,
+    .productlist-page .banner-top-desc .list-link{
+        display: none;
+    }
+    .productlist-page .CategoryDescription{
+        display: none;
+    }
+    .productlist-page .Left{
+        display: block;
+        width: 100%;
+        padding: 0;    
+    }
+    .productlist-page .Left .SubCategoryList{
+        display: block;   
+        margin-bottom: 5px;
+    }
+
+    .productlist-page .Left h3 {
+        background: #3abdb3;
+        border: 0;
+        color: #fff;
+        font-family: "Lato",Arial,sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        height: 40px;
+        line-height: 40px;
+        padding: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    .productlist-page .SubCategoryList span:first-child,
+    .productlist-page #SideCategoryShopByPrice h4{
+        background: url(../images/icon_arrow_up_01.png) right center no-repeat;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .productlist-page #CategoryHeading .TitleHeading{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .productlist-page .Left #SideCategoryList .SideCategoryListFlyout > ul > li, ul.side-menu > li{
+        padding-top: 0;
+    }
+    .productlist-page .Left .SubCategoryList{
+        border-bottom: 1px solid #000;    
+    }
+    .productlist-page .ShopByPrice{
+        border-bottom: 1px solid #000;    
+    }
 }
 
+@media screen and (max-width: 567px){
+    .productlist-page .ProductList li{
+        width: 50%;
+    }
+}
 
+@media screen and (max-width: 479px){
+    .productlist-page .banner-top-desc{
+        min-width: 155px;
+    }
+    .productlist-page .banner-top-desc h1{
+        font-size: 32px;
+        line-height: 32px;
+    }    
+    .productlist-page .banner-top-desc h1 span {
+        font-size: 13px;
+        line-height: 13px;
+    }
+    .productlist-page .ProductList .ProductActionAdd{
+        display: none;
+    }
+    .productlist-page .Left h3 {
+        font-size: 16px;
+    }
+    .productlist-page #CategoryHeading .TitleHeading{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+}
 

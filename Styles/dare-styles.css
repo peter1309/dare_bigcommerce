@@ -1,6 +1,6 @@
+.TitleHeading{ font-size: 60px; border-bottom: 3px solid #222; letter-spacing:-2px;}
+.top-slide{border-bottom: 1px solid #222; margin-bottom: 30px;}
 /*Login page*/
-#LogInPage, #CreateAccountPage{ border-top: 1px solid #222; padding-top: 30px;}
-#LogInPage .TitleHeading, #CreateAccountPage .TitleHeading{ font-size: 60px; border-bottom: 3px solid #222; }
 #LogInPage .grid__item{ font-size: 12px;}
 #LogInPage .CreateAccount h3, #LogInPage .AccountLogin h3,  #CreateAccountPage .FormContainer h3{ font-size: 18px; font-weight: 300;}
 #LogInPage .btn.alt{ border: 1px solid #000; text-decoration: none; font-family: 'Montserrat', sans-serif;font-size : 14px;font-weight : 400; color: #222; line-height: 32px;}
@@ -78,27 +78,164 @@
 .productPage #ImageScrollPrev{ position: absolute; left:0;}
 .productPage #ImageScrollNext{ position: absolute; right: 0;}
 .productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{display: none;}
-/* Responsive product page */
+.productPage #ShippingReturnInfo .main .inner{ border:none; margin:0; padding:0;}
+.productPage #ShippingReturnInfo .main .inner #PageBreadcrumb, .productPage #ShippingReturnInfo .main .inner .TitleHeading{ display: none;}
+
+
+/*Checkout page*/
+#HeaderCheckoutPage{ margin-bottom: 40px;}
+#HeaderCheckoutPage #Header .inner{ padding: 30px 0; position: relative; z-index: 1;}
+#HeaderCheckoutPage .header-logo{ height: 101px; text-align: center; width: 100%;}
+#HeaderCheckoutPage #backToCart a{ border: 1px solid #fff; color: #fff; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; padding: 5px 10px;}
+#HeaderCheckoutPage #backToCart{ position:absolute; left:0; top:45%;  z-index: 999;}
+#HeaderCheckoutPage .phoneIcon{ position:absolute; right:0; top:45% ;color: #fff; font-size: 14px; font-weight: 700; z-index: 999;}
+.ExpressCheckout .ExpressCheckoutBlock{ margin-bottom: 10px;} 
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutTitle{ text-transform: none; font-weight: 900; border: 1px solid #ddd; margin-bottom:0; font-size: 20px; color: #222;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input{ width: 100%;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent .AccountLogin input{ width: 68%;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_13, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_23, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent  div.selector{ width: 100% !important;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent .HorizontalFormContainer dt, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent .HorizontalFormContainer dd{ font-size: 12px; font-weight: 400;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input.btn{ background: #fff; border: 1px solid #000; width: auto; color: #222; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent h4{ text-transform: none; font-size: 18px; font-weight: 300;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent {padding: 25px 0 20px 20px; border: 1px solid #ddd; border-top: none;}
+.ExpressCheckout #CheckoutStepConfirmation table.CartContents{ width: 98%;}
+.ExpressCheckout #CheckoutStepConfirmation input{width: auto;}
+.ExpressCheckout #CheckoutStepConfirmation table.CartContents em, #CheckoutStepConfirmation .SubTotal td em{ font-style: normal;}
+.ExpressCheckout #CheckoutStepConfirmation .SubTotal td strong{ font-size: 16px;}
+.ExpressCheckout #CheckoutStepConfirmation #bottom_payment_button{ margin-right: 2%;}
+.CartContents thead {
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #222;
+}
+table.CartContents tbody tr td{
+    border-bottom: 1px solid #222;
+}
+.CartContents tfoot .SubTotal td {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+/*Shopping cart*/
+#CartContent{ width: 75%; float: left;}
+#CartContent .CartContents thead{ background: none;}
+#CartContent .CartContents th{ text-transform: uppercase; font-size: 12px; font-weight: 900; color: #000; border-bottom: 1px solid #000; text-align: center;}
+#CartContent table.CartContents tbody tr td{ text-align: center; border: none; font-size: 12px; color: #222; font-weight: 400;}
+#CartContent .CartContents th:first-child, #CartContent table.CartContents tbody tr td:first-child{ text-align: left;}
+#CartContent .CartContents .ProductName a{ float: left; margin-right: 20px;  color: #222; text-transform: uppercase; font-size:13px; font-weight: 400;}
+#CartContent .CartContents .ProductName a.CustomizeItemLink{ text-transform: none; text-decoration: underline;}
+#CartContent .CartContents .ProductPrice{ font-style: normal;}
+#CartContent .BlockContent img{ width: 100px;}
+#CartContent .CartContents tbody tr{ border-bottom: 1px solid #000;}
+#CartContent .CartContents tbody tr.Last{ border-bottom: none;}
+#CartContent .CartContents tfoot .SubTotal td div{ font-size: 16px; text-transform: none;}
+#CartContent .CartContents tfoot .First td:first-child div{ padding-right: 40px;}
+#CartContent .CartContents tfoot .gtotal  td div em{ padding-left: 40px;}
+#CartContent .CartContents tfoot .SubTotal td {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+#CartContent .CartContents .CartRemoveLink{ background: url(../images/btn-remove.png) center center no-repeat;}
+#CartContent .CartContents .btn.alt{ border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222; }
+#CartContent .ProceedToCheckout .CheckoutButton .btn{ 
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    letter-spacing: 0;
+    padding: 0 40px;
+}
+#CartContent .btn-updatecart, #CartContent .KeepShopping a{ background: none; border: none; color: #000; text-transform: none; text-decoration: underline; font-family: "Lato",Arial,Sans-serif; font-weight: 400;}
+#CartContent .KeepShopping{ float: left; margin-right: 35px; text-align: left;}
+#CartContent #cartForm div.GroupButton{ float: left; margin-top: 15px;}
+.CartCode { width: 23%; margin-left:2%; float:left;  margin-top: 49px;}
+.CartCode h3{ border-bottom: 3px solid #222;  padding: 0 0 15px 0; margin-bottom: 15px;}
+.CartCode .CouponCode, .CartCode .GiftCertificate{ width: 100%;}
+.CartCode input{ height: 40px; line-height: 40px; width: 75%;}
+.CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ background: #fff; border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222;  letter-spacing: -0.5px;    width: 48px; height: 40px; line-height: 40px; margin-left: 10px;}
+.CartCode .GiftCertificate, .CartCode #SecurePaymentArea{ margin-top: 25px; float: left;}
+.CartCode #SecurePaymentArea .img-secure{ margin-bottom: 20px;}
+
 
 @media screen and (max-width: 1199px){
-
+.TitleHeading{ font-size: 48px; letter-spacing:0;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width:99% !important;}
+.CartCode{ margin-top: 34px;}
+.CartCode input{ height: 35px; line-height: 35px;}
+.CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 40px; height: 35px; line-height: 35px;}
 }
 
 
 @media screen and (max-width: 1023px){
 .productPage .TabNav li a{font-size: 11px; height:36px; line-height: 36px;}
 .productPage #SideProductRelated .owl-nav .owl-prev{right: 12%;}
-
+.TitleHeading{ font-size: 36px;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width: 99% !important;}
+.CartCode{ margin-top: 20px;}
+.CartCode input { height: 30px;line-height: 30px; width: 68%;}
+.CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 35px; height: 30px; line-height: 30px; font-size: 12px;}
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
 .productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{ display:block;}
 .productPage #ProductDetails .left-content, .productPage .PrimaryProductDetails .ProductMain{display:none;}
 .productPage #ProductDetails h1{ font-size: 30px; line-height:35px;}
 .productPage #SideProductRelated h2{font-size: 22px; border: none; text-align: center;}
 .productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{ top: -52px;}
 .productPage #SideProductRelated .owl-nav .owl-prev{ left:0; right: auto;}
-#LogInPage .TitleHeading{ font-size: 30px;}
-#LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ width: 100%; height: 40px; line-height: 40px; font-size: 12px !important;}
+.productPage #ProductTabsListMobile{ width: 100%; margin:0; border-bottom: 1px solid #000;}
+.productPage #ProductTabsListMobile > li{ list-style-type: none; border-top: 1px solid #000; position: relative; padding: 10px 36px 10px 0; width: auto;}
+.productPage #ProductTabsListMobile > li a:before{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "+";
+    font: 700 15px 'lato';
+    color: #000;
+    line-height: 36px;
+    text-align: center;
+}
+.productPage #ProductTabsListMobile > li.showinfo a:before{
+    content: "-";
+}
+.productPage #ProductTabsListMobile > li a{ font-size: 14px; text-transform: uppercase; font-family:'Montserrat', sans-serif; font-weight: 400; color: #222; }
+.productPage #ProductTabsListMobile > li a:link, .productPage #ProductTabsListMobile > li a:visited, .productPage #ProductTabsListMobile > li a:active, .productPage #ProductTabsListMobile > li a:hover{ background: none;}
+.productPage #ProductTabsListMobile .main .inner{ border:none; margin:0; padding:0;}
+.productPage #ProductTabsListMobile .main .inner #PageBreadcrumb, .productPage #ProductTabsListMobile .main .inner .TitleHeading{ display: none;}
+.TitleHeading{font-size: 30px; padding: 0 0 10px 0;}
+#HeaderCheckoutPage{ margin-bottom: 10px;}
+#HeaderCheckoutPage #Header{ background: #040707; position: static; height: auto;}
+#HeaderCheckoutPage #backToCart, #HeaderCheckoutPage .phoneIcon{ top: 10%;}
+#HeaderCheckoutPage #backToCart{ left: 10px;}
+#HeaderCheckoutPage .phoneIcon{ right: 10px;}
+#HeaderCheckoutPage #backToCart a, #HeaderCheckoutPage .phoneIcon{font-size: 10px;}
+#HeaderCheckoutPage .header-logo{ position: absolute; top: 40%; text-align: left;}
+#HeaderCheckoutPage .header-logo a{ padding-left: 15px;}
+#HeaderCheckoutPage .header-logo img{ width: 115px;}
+#HeaderCheckoutPage #Header .inner{ padding: 45px 0;}
+#HeaderCheckoutPage #ToggleMenu{ padding-top: 48px; color: #fff;}
+#HeaderCheckoutPage #ToggleMenu span{ color: #fff;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input.btn{ font-size: 12px;}
+#CartContent, .CartCode{width: 100%;}
+#CartContent .ProceedToCheckout{ float: left; margin-top: 30px; width: 100%;}
+}
+
+@media screen and (max-width: 480px){
+#LogInPage .TitleHeading, #CreateAccountPage .TitleHeading{ font-size: 30px;}
+#LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ width: 100%; height: 36px; line-height: 36px; font-size: 12px !important;}
 #LogInPage .btn.alt{ height: auto;}
+#CreateAccountPage .FormContainer .box.borderB, #CreateAccountPage .FormContainer .box.bottom-form{ width: 100%; float: left;}
+#CreateAccountPage .FormContainer .box input, #CreateAccountPage .FormContainer .box div.selector{ height: 36px; line-height: 36px;}
+.btn, .btn.alt, textarea, input[type="email"], input[type="text"], input[type="password"], input.Textbox{ height: 36px; line-height: 36px; font-size: 12px !important;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input {width: 90%;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_13, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_23{width:90% !important;}
+.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{width:89% !important}
+#CartContent .ProceedToCheckout .CheckoutButton { padding:0;}
+#CartContent .ProceedToCheckout .CheckoutButton .btn{ height: 45px; line-height: 45px; margin:0}
+.PayPalExpressCheckout input{ width: 100%;}
+#CartContent .ProceedToCheckout{ width: auto;}
 }

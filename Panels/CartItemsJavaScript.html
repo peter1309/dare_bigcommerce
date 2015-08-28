@@ -1,7 +1,29 @@
 <script type="text/javascript">
     $(window).load(function () {
-        var itemName = $('.CartContents .CartThumb').html();
-        $('.CartContents .ProductName').prepend(itemName);
-        $('.CartContents .CartThumb').remove();
+        $('#CartContent .PayPalExpressCheckout > p:first-child').text('OR');
+        //Append column
+        var content = [];
+        $('.CartContents .CartThumb').each(function(){
+            content.push($(this).html());
+        });
+        $.each(content, function(index , val){
+            $('.CartContents .ProductName').each(function(i){
+                if(index == i){
+                    $(this).prepend(val);
+                    $(this).next('a').append('<br/>');
+                    $(this).parent().find('.CartThumb').remove();
+                    return false;
+                }
+            });
+            return;
+        });
+        // Append Secure Payment
+        var baseLink = '%%GLOBAL_ShopPath%%';
+        $('.CartCode.cf').append('<div id="SecurePaymentArea"></div>');
+        $('.CartCode.cf').append($('#SecurePaymentArea').load(baseLink+'/secure-payment/' + ' .securePaymentContent' ));
+        
+        // Replace image checkout with paypal
+        var imgPath = '%%ASSET_images/btn-paypal.png%%';
+        $('#CartContent .PayPalExpressCheckout form').find('input[type="image"]').attr('src',imgPath);
     });
 </script>

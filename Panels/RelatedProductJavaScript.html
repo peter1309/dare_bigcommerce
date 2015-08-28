@@ -1,18 +1,27 @@
 <script type="text/javascript">
     $(window).load(function() {
         $('#related-product-slider .slides').owlCarousel({
-            itemsCustom : [
-                [0, 2],
-                [1200, 3]
-            ],
+            items : 3,
             pagination : false,
             autoPlay : true,
+            loop : true,
             navigation : true,
             navigationText: [
                 "<i class='flex-prev'><</i>",
                 "<i class='flex-next'>></i>"
             ],
-            stopOnHover : true
+            stopOnHover : true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1025:{
+                    items:3
+                }
+            }
         });
     });
 </script>

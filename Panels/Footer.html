@@ -25,6 +25,17 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        if($(window).width() < 768){
+            $('.footer-main .grid__item > h4').click(function(){
+                $(this).toggleClass('active');
+                $(this).next().slideToggle();
+            });            
+        }
+    });
+</script>
+
 %%GLOBAL_DesignModeHTML%%
 %%GLOBAL_QueryList%%
 %%GLOBAL_DesignModeScriptTag%%

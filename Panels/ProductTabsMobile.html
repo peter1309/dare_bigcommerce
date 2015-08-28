@@ -1,4 +1,5 @@
 %%GLOBAL_ProductTabsControlScript%%
+%%Panel.ProductTabsMobileJavaScript%%
 <div class="Panel" id="ProductTabs">
     <script type="text/javascript">
         lang.Description = '%%LNG_JS_Description%%';
@@ -11,14 +12,12 @@
         lang.ProductVideos = '%%LNG_JS_ProductVideos%%';
         lang.SimilarProductsByCustomerViews = '%%LNG_JS_SimilarProductsByCustomerViews%%';
     </script>
-    <ul class="TabNav" id="ProductTabsList">
+    <ul class="TabNavMobile" id="ProductTabsListMobile">
         <li><a href="javascript:void(0)">Description</a></li>
-        <li><a href="javascript:void(0)">Shipping</a></li>
-        <li><a href="javascript:void(0)">Showrooms</a></li>
-    </ul>
-    <div id="tabs-content">
         %%Panel.ProductDescription%%
+        <li><a href="javascript:void(0)">Shipping</a></li>
+        %%Panel.ShippingReturnInfoMobile%%
+        <li><a href="javascript:void(0)">Showrooms</a></li>
         %%Panel.OurShowRooms%%
-        %%Panel.ShippingReturnInfo%%
-    </div>
+    </ul>
 </div>

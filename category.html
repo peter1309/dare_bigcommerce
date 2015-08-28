@@ -12,15 +12,12 @@
                             <h3>Shop by</h3>
                             %%SNIPPET_SubCategories%%
                             %%Panel.SideCategoryShopByPrice%%
-                            <div class="searchspring-facets_container"></div>
                             <div class="clear"></div>
-                            %%Panel.CategoryLeftJavaScript%%
                         </div>
                         <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
                             <div class="product-nav">
                                 %%Panel.CategoryHeading%%
                                 %%SNIPPET_CategorySortBox%%
-                                %%Panel.CategoryPagingTop%%
                                 <div class="clear"></div>
                             </div>
                             %%Panel.CategoryContent%%
@@ -34,3 +31,46 @@
         </div>
     </body>
 </html>
+<script type="text/javascript">
+    $(window).load(function(){
+        showFilter();
+        $(window).resize(function(){
+            showFilter();
+        });
+        function showFilter(){
+            if($(window).outerWidth() < 767){
+                $('.productlist-page .SubCategoryList').hide();
+                $('.productlist-page #SideCategoryShopByPrice').hide();
+                $('.productlist-page .Left h3').toggle(function(){
+                    $('.productlist-page .SubCategoryList').show();
+                    $('.productlist-page .SubCategoryList ul').hide();
+                    $('.productlist-page #SideCategoryShopByPrice').show();
+                    $('.productlist-page #SideCategoryShopByPrice .BlockContent').hide();
+
+                },function(){
+                    $('.productlist-page .SubCategoryList').hide();
+                    $('.productlist-page #SideCategoryShopByPrice').hide();
+                });
+                $('.SubCategoryList span:contains("Category")').toggle(function(){
+                    $(this).addClass('showSub');
+                    $(this).next('ul').fadeIn('slow');
+                },function(){
+                    $(this).removeClass('showSub');
+                    $(this).next('ul').fadeOut('slow');
+                });
+                $('#SideCategoryShopByPrice > h4').toggle(function(){
+                    $(this).addClass('showSub');
+                    $(this).parent().find('.BlockContent').fadeIn('slow');
+                },function(){
+                    $(this).removeClass('showSub');
+                    $(this).parent().find('.BlockContent').fadeOut('slow');
+                });
+            }else {
+                $('.productlist-page .SubCategoryList').show();
+                $('.productlist-page .SubCategoryList ul').show();
+                $('.productlist-page #SideCategoryShopByPrice').show();
+                $('.productlist-page #SideCategoryShopByPrice .BlockContent').show();
+            }
+        }
+    });
+</script>
