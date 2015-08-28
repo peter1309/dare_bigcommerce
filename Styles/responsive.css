@@ -376,7 +376,7 @@
 
     /* Hide */
 
-    .TopMenu,
+    /*.TopMenu,
     .PageMenu,
     .QuickViewBtn,
     .ProductList .ProductActionAdd,
@@ -388,19 +388,19 @@
     .footer-columns .BrandList,
     .footer-columns .CategoryList {
         display: none !important;
-    }
+    }*/
     
     /* Show */
     
-    .header-secondary,
+    /*.header-secondary,
     #home .PageMenu {
         display: block !important;
-    }
+    }*/
 
-    #ToggleMenu,
+    /*#ToggleMenu,
     #cart-amount {
         display: table-cell;
-    }
+    }*/
 
     /* Layout */
     
@@ -452,7 +452,7 @@
         width: 100%;
     }
 
-    .TopMenu > .inner,
+    /*.TopMenu > .inner,
      #Header > .inner,
     .PageMenu > .inner,
     .main > .inner,
@@ -460,9 +460,9 @@
     .footer-links > .inner,
     .newsletter-subscription > .inner {
         width: 90%;
-    }
+    }*/
 
-    .header {
+    /*.header {
         border: none;
         padding-top: 115px;
     }
@@ -593,7 +593,7 @@
     .PageMenu a {
         padding: 1em;
         font-size: 1.2em;
-    }
+    }*/
     
     .SubCategoryList {
         padding: 0;

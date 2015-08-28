@@ -16,24 +16,8 @@
         </div>
     </div>
     %%Panel.Footer%%
-    <a href="javascript:void(0)" class="back-to-top">^</a>
+    <a href="javascript:void(0)" class="backToTop">Top</a>
 </div>
 </body>
-<script type="text/javascript">
-    $(document).ready(function(){
-        var start = 0;
-        var position = start + $('body').scrollTop();
-        var breakpoint = $('.header').height() - 100;
-        $(window).on('scroll', function(){
-            if(position > breakpoint){
-                $('.back-to-top').fadeIn();
-                $('.back-to-top').on('click', function(){
-                    $('html, body').animate({ scrollTop: 0 }, 1000);
-                    return false;
-                });
-            }else {
-                $('.back-to-top').fadeOut();
-            }
-        });
-    });
-</script>
+
+

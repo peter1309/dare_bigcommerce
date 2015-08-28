@@ -1,10 +1,9 @@
 %%Panel.HTMLHead%%
     <body>
-        <!--%%Panel.DrawerMenu%%-->
         <div class="page">
             %%Panel.Header%%
             <div class="main">
-                <div class="inner">
+                <div class="inner" id="LogInPage">
                     %%Panel.WrapperBanner%%
                     <div class="Content Widest" id="LayoutColumn1">
                         %%Panel.LoginBreadcrumb%%
@@ -18,8 +17,3 @@
         </div>
     </body>
 </html>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.AccountLogin .actions').find('#LoginButton').attr('value','Login');
-    });
-</script>

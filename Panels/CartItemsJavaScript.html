@@ -1,0 +1,7 @@
+<script type="text/javascript">
+    $(window).load(function () {
+        var itemName = $('.CartContents .CartThumb').html();
+        $('.CartContents .ProductName').prepend(itemName);
+        $('.CartContents .CartThumb').remove();
+    });
+</script>

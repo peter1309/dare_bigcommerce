@@ -48,42 +48,5 @@ $(document).ready(function(){
         });
     }
 
-    //Related products slider on product page
-    $('.ProductTinyImageList ul').owlCarousel({
-        itemsCustom : [
-            [0, 2],
-            [1200, 5]
-        ],
-        navagation : true,
-        navigationText: [
-            "<i class='flex-prev'><</i>",
-            "<i class='flex-next'>></i>"
-        ],
-        autoPlay : false,
-        pagination : false,
-        stopOnHover : true
-    });
-
-    //Product tabs product page
-    $('#tabs-content .showrooms-links').hide();
-    $('#ProductTabsList li:first-child').addClass('open');
-    $('#ProductTabsList li').on('click', function(){
-        var tab = $(this).text().toLowerCase().trim();
-        $('#ProductTabsList li').removeClass('open');
-        if( tab == 'description'){
-            $(this).addClass('open');
-            $('#tabs-content .showrooms-links').fadeOut();
-            $('#ProductDescription').fadeIn();
-        }
-        else if(tab == 'shipping') {
-            $(this).addClass('open');
-        }
-        else {
-            $(this).addClass('open');
-            $('#ProductDescription').fadeOut();
-            $('#tabs-content .showrooms-links').fadeIn();
-        }
-    });
-
     //]]>
 });

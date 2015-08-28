@@ -1,0 +1,66 @@
+<script type="text/javascript">
+    $(window).load(function(){
+        if($(window).outerWidth() < 768){
+            $('#ProductTabsListMobile #ProductDescription').hide();
+            $('#ShippingReturnInfoMobile').hide();
+            $('.TabNavMobile .showrooms-links').hide();
+            $('.TabNavMobile li a:contains("Description")').toggle(function(){
+                $('.TabNavMobile li').removeClass('showinfo');
+                $(this).parent().addClass('showinfo');
+                $('#ProductTabsListMobile #ProductDescription').fadeIn();
+                $('#ShippingReturnInfoMobile').fadeOut();
+                $('.TabNavMobile .showrooms-links').fadeOut();
+            },function(){
+                $(this).parent().removeClass('showinfo');
+                $('#ProductTabsListMobile #ProductDescription').fadeOut();
+            });
+            $('.TabNavMobile li a:contains("Shipping")').toggle(function(){
+                $('.TabNavMobile li').removeClass('showinfo');
+                $(this).parent().addClass('showinfo');
+                $('#ProductTabsListMobile #ProductDescription').fadeOut();
+                $('#ShippingReturnInfoMobile').fadeIn();
+                $('.TabNavMobile .showrooms-links').fadeOut();
+            },function(){
+                $(this).parent().removeClass('showinfo');
+                $('#ShippingReturnInfoMobile').fadeOut();
+            });
+
+            $('.TabNavMobile li a:contains("Showrooms")').toggle(function(){
+                $('.TabNavMobile li').removeClass('showinfo');
+                $(this).parent().addClass('showinfo');
+                $('#ProductTabsListMobile #ProductDescription').fadeOut();
+                $('#ShippingReturnInfoMobile').fadeOut();
+                $('.TabNavMobile .showrooms-links').fadeIn();
+            },function(){
+                $(this).parent().removeClass('showinfo');
+                $('.TabNavMobile .showrooms-links').fadeOut();
+            });
+        }else {
+            $('#tabs-content .showrooms-links').hide();
+            $('#ShippingReturnInfo').hide();
+            $('#ProductTabsList li:first-child').addClass('open');
+            $('#ProductTabsList li').on('click', function(){
+                var tab = $(this).text().toLowerCase().trim();
+                $('#ProductTabsList li').removeClass('open');
+                if( tab == 'description'){
+                    $(this).addClass('open');
+                    $('#tabs-content .showrooms-links').fadeOut();
+                    $('#ProductDescription').fadeIn();
+                    $('#ShippingReturnInfo').fadeOut();
+                }
+                else if(tab == 'shipping') {
+                    $(this).addClass('open');
+                    $('#tabs-content .showrooms-links').fadeOut();
+                    $('#ProductDescription').fadeOut();
+                    $('#ShippingReturnInfo').fadeIn();
+                }
+                else {
+                    $(this).addClass('open');
+                    $('#ProductDescription').fadeOut();
+                    $('#tabs-content .showrooms-links').fadeIn();
+                    $('#ShippingReturnInfo').fadeOut();
+                }
+            });
+        }
+    });
+</script>
