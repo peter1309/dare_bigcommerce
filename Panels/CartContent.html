@@ -28,20 +28,24 @@
                     </thead>
                     <tfoot>
                     <tr class="SubTotal">
-                        <td colspan="5"><div>%%LNG_Subtotal%%</div></td>
+                        <td class="col-mobile">&nbsp;</td>
+                        <td colspan="3"><div>%%LNG_Subtotal%%</div></td>
                         <td><div><em class="ProductPrice">%%GLOBAL_CartItemTotal%%</em></div></td>
                     </tr>
                     <tr class="SubTotal" style="%%GLOBAL_HideGiftWrappingTotal%%">
-                        <td colspan="5"><div>%%LNG_GiftWrapping%%</div></td>
+                        <td class="col-mobile"></td>
+                        <td colspan="3"><div>%%LNG_GiftWrapping%%</div></td>
                         <td><div><em class="ProductPrice">%%GLOBAL_GiftWrappingTotal%%</em></div></td>
                     </tr>
                     %%SNIPPET_NormalCoupons%%
                     <tr class="SubTotal" style="%%GLOBAL_HideDiscountAmount%%">
-                        <td colspan="5"><div>%%LNG_Discount%%</div></td>
+                        <td class="col-mobile"></td>
+                        <td colspan="3"><div>%%LNG_Discount%%</div></td>
                         <td><div><em class="ProductPrice">%%GLOBAL_DiscountAmount%%</em></div></td>
                     </tr>
                     <tr class="SubTotal" style="%%GLOBAL_HideShoppingCartShippingEstimator%%">
-                        <td colspan="6">
+                        <td class="col-mobile"></td>
+                        <td colspan="4">
                             <div>
                                 <a href="#" class="EstimateShippingLink btn alt" onclick="ToggleShippingEstimation2(); return false;">%%LNG_CalculateShippingHandling%%</a>
                                 <div class="EstimateShipping" style="display: none;">
@@ -82,18 +86,21 @@
                         </td>
                     </tr>
                     <tr style="display:%%GLOBAL_HideShoppingCartShippingCost%%" class="SubTotal">
-                        <td colspan="5"><div>%%LNG_Shipping%% (%%GLOBAL_ShippingProvider%%)</div></td>
+                        <td class="col-mobile"></td>
+                        <td colspan="3"><div>%%LNG_Shipping%% (%%GLOBAL_ShippingProvider%%)</div></td>
                         <td><div><em class="ProductPrice">%%GLOBAL_ShippingCost%%</em></div></td>
                     </tr>
                     %%SNIPPET_FreeShippingCoupons%%
                     <tr style="display: %%GLOBAL_HideShoppingCartHandlingCost%%" class="SubTotal">
-                        <td colspan="5"><div>%%LNG_Handling%%</div></td>
+                        <td class="col-mobile"></td>
+                        <td colspan="3"><div>%%LNG_Handling%%</div></td>
                         <td><div><em class="ProductPrice">%%GLOBAL_HandlingCost%%</em></div></td>
                     </tr>
                     %%GLOBAL_Taxes%%
                     %%SNIPPET_GiftCertificates%%
                     <tr class="SubTotal gtotal">
-                        <td colspan="6"><div>%%LNG_GrandTotal%% <em class="ProductPrice">%%GLOBAL_CartTotal%%</em></div></td>
+                        <td class="col-mobile"></td>
+                        <td colspan="4"><div>%%LNG_GrandTotal%% <em class="ProductPrice">%%GLOBAL_CartTotal%%</em></div></td>
                     </tr>
                     %%GLOBAL_InclusiveTaxes%%
                     </tfoot>

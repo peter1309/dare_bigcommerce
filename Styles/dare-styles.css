@@ -23,9 +23,9 @@
 .productPage #CategoryDrivers ul > li:nth-child(4),
 .productPage #x3-row { display : none;}
 .productPage #PromArea { border-top : none;}
-.productPage .addto .BulkDiscount, 
+.productPage .addto .BulkDiscount,
 .productPage .addto #SideProductAddToWishList {width : 100%;display : block;}
-.productPage .PrimaryProductDetails .btn.add-to-cart, 
+.productPage .PrimaryProductDetails .btn.add-to-cart,
 .productPage .addto #SideProductAddToWishList input { width : 100%;}
 .productPage .left-content { width : 63%;}
 .productPage .PrimaryProductDetails .ProductMain { width : 34%;padding : 0;}
@@ -89,7 +89,7 @@
 #HeaderCheckoutPage #backToCart a{ border: 1px solid #fff; color: #fff; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; padding: 5px 10px;}
 #HeaderCheckoutPage #backToCart{ position:absolute; left:0; top:45%;  z-index: 999;}
 #HeaderCheckoutPage .phoneIcon{ position:absolute; right:0; top:45% ;color: #fff; font-size: 14px; font-weight: 700; z-index: 999;}
-.ExpressCheckout .ExpressCheckoutBlock{ margin-bottom: 10px;} 
+.ExpressCheckout .ExpressCheckoutBlock{ margin-bottom: 10px;}
 .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutTitle{ text-transform: none; font-weight: 900; border: 1px solid #ddd; margin-bottom:0; font-size: 20px; color: #222;}
 .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input{ width: 100%;}
 .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent .AccountLogin input{ width: 68%;}
@@ -137,9 +137,9 @@ table.CartContents tbody tr td{
 }
 #CartContent .CartContents .CartRemoveLink{ background: url(../images/btn-remove.png) center center no-repeat;}
 #CartContent .CartContents .btn.alt{ border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222; }
-#CartContent .ProceedToCheckout .CheckoutButton .btn{ 
+#CartContent .ProceedToCheckout .CheckoutButton .btn{
     background-color: #000;
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: bold;
     height: 60px;
@@ -160,82 +160,87 @@ table.CartContents tbody tr td{
 
 
 @media screen and (max-width: 1199px){
-.TitleHeading{ font-size: 48px; letter-spacing:0;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width:99% !important;}
-.CartCode{ margin-top: 34px;}
-.CartCode input{ height: 35px; line-height: 35px;}
-.CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 40px; height: 35px; line-height: 35px;}
+    .TitleHeading{ font-size: 48px; letter-spacing:0;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width:99% !important;}
+    .CartCode{ margin-top: 34px;}
+    .CartCode input{ height: 35px; line-height: 35px;}
+    .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 40px; height: 35px; line-height: 35px;}
 }
 
 
 @media screen and (max-width: 1023px){
-.productPage .TabNav li a{font-size: 11px; height:36px; line-height: 36px;}
-.productPage #SideProductRelated .owl-nav .owl-prev{right: 12%;}
-.TitleHeading{ font-size: 36px;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width: 99% !important;}
-.CartCode{ margin-top: 20px;}
-.CartCode input { height: 30px;line-height: 30px; width: 68%;}
-.CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 35px; height: 30px; line-height: 30px; font-size: 12px;}
+    .productPage .TabNav li a{font-size: 11px; height:36px; line-height: 36px;}
+    .productPage #SideProductRelated .owl-nav .owl-prev{right: 12%;}
+    .TitleHeading{ font-size: 36px;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width: 99% !important;}
+    .CartCode{ margin-top: 20px;}
+    .CartCode input { height: 30px;line-height: 30px; width: 68%;}
+    .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 35px; height: 30px; line-height: 30px; font-size: 12px;}
 }
 
-@media screen and (max-width: 768px){
-.productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{ display:block;}
-.productPage #ProductDetails .left-content, .productPage .PrimaryProductDetails .ProductMain{display:none;}
-.productPage #ProductDetails h1{ font-size: 30px; line-height:35px;}
-.productPage #SideProductRelated h2{font-size: 22px; border: none; text-align: center;}
-.productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{ top: -52px;}
-.productPage #SideProductRelated .owl-nav .owl-prev{ left:0; right: auto;}
-.productPage #ProductTabsListMobile{ width: 100%; margin:0; border-bottom: 1px solid #000;}
-.productPage #ProductTabsListMobile > li{ list-style-type: none; border-top: 1px solid #000; position: relative; padding: 10px 36px 10px 0; width: auto;}
-.productPage #ProductTabsListMobile > li a:before{
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: "+";
-    font: 700 15px 'lato';
-    color: #000;
-    line-height: 36px;
-    text-align: center;
-}
-.productPage #ProductTabsListMobile > li.showinfo a:before{
-    content: "-";
-}
-.productPage #ProductTabsListMobile > li a{ font-size: 14px; text-transform: uppercase; font-family:'Montserrat', sans-serif; font-weight: 400; color: #222; }
-.productPage #ProductTabsListMobile > li a:link, .productPage #ProductTabsListMobile > li a:visited, .productPage #ProductTabsListMobile > li a:active, .productPage #ProductTabsListMobile > li a:hover{ background: none;}
-.productPage #ProductTabsListMobile .main .inner{ border:none; margin:0; padding:0;}
-.productPage #ProductTabsListMobile .main .inner #PageBreadcrumb, .productPage #ProductTabsListMobile .main .inner .TitleHeading{ display: none;}
-.TitleHeading{font-size: 30px; padding: 0 0 10px 0;}
-#HeaderCheckoutPage{ margin-bottom: 10px;}
-#HeaderCheckoutPage #Header{ background: #040707; position: static; height: auto;}
-#HeaderCheckoutPage #backToCart, #HeaderCheckoutPage .phoneIcon{ top: 10%;}
-#HeaderCheckoutPage #backToCart{ left: 10px;}
-#HeaderCheckoutPage .phoneIcon{ right: 10px;}
-#HeaderCheckoutPage #backToCart a, #HeaderCheckoutPage .phoneIcon{font-size: 10px;}
-#HeaderCheckoutPage .header-logo{ position: absolute; top: 40%; text-align: left;}
-#HeaderCheckoutPage .header-logo a{ padding-left: 15px;}
-#HeaderCheckoutPage .header-logo img{ width: 115px;}
-#HeaderCheckoutPage #Header .inner{ padding: 45px 0;}
-#HeaderCheckoutPage #ToggleMenu{ padding-top: 48px; color: #fff;}
-#HeaderCheckoutPage #ToggleMenu span{ color: #fff;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input.btn{ font-size: 12px;}
-#CartContent, .CartCode{width: 100%;}
-#CartContent .ProceedToCheckout{ float: left; margin-top: 30px; width: 100%;}
+@media screen and (max-width: 767px){
+    .productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{ display:block;}
+    .productPage #ProductDetails .left-content, .productPage .PrimaryProductDetails .ProductMain{display:none;}
+    .productPage #ProductDetails h1{ font-size: 30px; line-height:35px;}
+    .productPage #SideProductRelated h2{font-size: 22px; border: none; text-align: center;}
+    .productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{ top: -52px;}
+    .productPage #SideProductRelated .owl-nav .owl-prev{ left:0; right: auto;}
+    .productPage #ProductTabsListMobile{ width: 100%; margin:0; border-bottom: 1px solid #000;}
+    .productPage #ProductTabsListMobile > li{ list-style-type: none; border-top: 1px solid #000; position: relative; padding: 10px 36px 10px 0; width: auto;}
+    .productPage #ProductTabsListMobile > li a:before{
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "+";
+        font: 700 15px 'lato';
+        color: #000;
+        line-height: 36px;
+        text-align: center;
+    }
+    .productPage #ProductTabsListMobile > li.showinfo a:before{
+        content: "-";
+    }
+    .productPage #ProductTabsListMobile > li a{ font-size: 14px; text-transform: uppercase; font-family:'Montserrat', sans-serif; font-weight: 400; color: #222; }
+    .productPage #ProductTabsListMobile > li a:link, .productPage #ProductTabsListMobile > li a:visited, .productPage #ProductTabsListMobile > li a:active, .productPage #ProductTabsListMobile > li a:hover{ background: none;}
+    .productPage #ProductTabsListMobile .main .inner{ border:none; margin:0; padding:0;}
+    .productPage #ProductTabsListMobile .main .inner #PageBreadcrumb, .productPage #ProductTabsListMobile .main .inner .TitleHeading{ display: none;}
+    .TitleHeading{font-size: 30px; padding: 0 0 10px 0;}
+    #HeaderCheckoutPage{ margin-bottom: 10px;}
+    #HeaderCheckoutPage #Header{ background: #040707; position: static; height: auto;}
+    #HeaderCheckoutPage #backToCart, #HeaderCheckoutPage .phoneIcon{ top: 10%;}
+    #HeaderCheckoutPage #backToCart{ left: 10px;}
+    #HeaderCheckoutPage .phoneIcon{ right: 10px;}
+    #HeaderCheckoutPage #backToCart a, #HeaderCheckoutPage .phoneIcon{font-size: 10px;}
+    #HeaderCheckoutPage .header-logo{ position: absolute; top: 40%; text-align: left; width: auto;}
+    #HeaderCheckoutPage .header-logo a{ padding-left: 15px;}
+    #HeaderCheckoutPage .header-logo img{ width: 115px;}
+    #HeaderCheckoutPage #Header .inner{ padding: 45px 0;}
+    #HeaderCheckoutPage #ToggleMenu{ padding-top: 48px; color: #fff;}
+    #HeaderCheckoutPage #ToggleMenu span{ color: #fff;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input.btn{ font-size: 12px; letter-spacing: 0;}
+    .ExpressCheckout #CheckoutStepConfirmation table.CartContents{ width: 96%;}
+    #CartContent, .CartCode{width: 100%;}
+    #CartContent .ProceedToCheckout{ float: left; margin-top: 30px; width: 100%;}
 }
 
 @media screen and (max-width: 480px){
-#LogInPage .TitleHeading, #CreateAccountPage .TitleHeading{ font-size: 30px;}
-#LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ width: 100%; height: 36px; line-height: 36px; font-size: 12px !important;}
-#LogInPage .btn.alt{ height: auto;}
-#CreateAccountPage .FormContainer .box.borderB, #CreateAccountPage .FormContainer .box.bottom-form{ width: 100%; float: left;}
-#CreateAccountPage .FormContainer .box input, #CreateAccountPage .FormContainer .box div.selector{ height: 36px; line-height: 36px;}
-.btn, .btn.alt, textarea, input[type="email"], input[type="text"], input[type="password"], input.Textbox{ height: 36px; line-height: 36px; font-size: 12px !important;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input {width: 90%;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_13, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_23{width:90% !important;}
-.ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{width:89% !important}
-#CartContent .ProceedToCheckout .CheckoutButton { padding:0;}
-#CartContent .ProceedToCheckout .CheckoutButton .btn{ height: 45px; line-height: 45px; margin:0}
-.PayPalExpressCheckout input{ width: 100%;}
-#CartContent .ProceedToCheckout{ width: auto;}
+    #LogInPage .TitleHeading, #CreateAccountPage .TitleHeading{ font-size: 30px;}
+    #LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ width: 100%; height: 36px; line-height: 36px; font-size: 12px !important;}
+    #LogInPage .btn.alt{ height: auto;}
+    #CreateAccountPage .FormContainer .box.borderB, #CreateAccountPage .FormContainer .box.bottom-form{ width: 100%; float: left;}
+    #CreateAccountPage .FormContainer .box input, #CreateAccountPage .FormContainer .box div.selector{ height: 36px; line-height: 36px;}
+    .btn, .btn.alt, textarea, input[type="email"], input[type="text"], input[type="password"], input.Textbox{ height: 36px; line-height: 36px; font-size: 12px !important;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input {width: 90%;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_13, .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent #FormField_23{width:90% !important;}
+    .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{width:89% !important}
+    .ExpressCheckout #CheckoutStepConfirmation table.CartContents {width: 93%;}
+    .ExpressCheckout #CheckoutStepConfirmation textarea{ width: auto;}
+    .PayPalExpressCheckout input{ width: 100%;}
+    #CartContent .ProceedToCheckout .CheckoutButton { padding:0;}
+    #CartContent .ProceedToCheckout .CheckoutButton .btn{ height: 45px; line-height: 45px; margin:0}
+    #CartContent .col-mobile{ display: none;}
+    #CartContent .ProceedToCheckout{ width: auto;}
+    .btn{ letter-spacing: 0;}
 }

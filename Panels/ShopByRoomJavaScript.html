@@ -2,8 +2,8 @@
     //<![CDATA[
     $(document).ready(function(){
         var baseLink = '%%GLOBAL_ShopPath%%';
-        var activeLink = baseLink+'/root/mens';
-        $("#slider-shopby").load(baseLink+'/root/mens .ProductList');
+        var activeLink = baseLink+'/mens';
+        $("#slider-shopby").load(baseLink+'/mens .ProductList');
         showByRoom();
         $(window).resize(function(){
             showByRoom();
@@ -21,11 +21,11 @@
         $('#ShopByRoom ul li').find('a').each(function(){
             $(this).click(function(){
                 var categoryName = $(this).text().toLowerCase().trim();
-                var currentLink = baseLink+'/root/'+categoryName;
+                var currentLink = baseLink+'/'+categoryName;
                 $('#ShopByRoom ul.sf-menu li').removeClass('active');
                 $(this).parent().addClass('active');
                 $(this).parent().parent().parent().find('a.btn-view-cat').attr('href',currentLink);
-                $('#slider-shopby').load(baseLink+'/root/'+categoryName+'/'+ ' .ProductList');
+                $('#slider-shopby').load(baseLink+'/'+categoryName+'/'+ ' .ProductList');
                 setTimeout(function(){
                     $('#slider-shopby .ProductList').owlCarousel({
                         items: 6,
