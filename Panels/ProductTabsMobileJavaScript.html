@@ -1,39 +1,12 @@
 <script type="text/javascript">
-    $(window).load(function(){
+    $(document).ready(function(){
         if($(window).outerWidth() < 768){
             $('#ProductTabsListMobile #ProductDescription').hide();
             $('#ShippingReturnInfoMobile').hide();
             $('.TabNavMobile .showrooms-links').hide();
-            $('.TabNavMobile li a:contains("Description")').toggle(function(){
-                $('.TabNavMobile li').removeClass('showinfo');
-                $(this).parent().addClass('showinfo');
-                $('#ProductTabsListMobile #ProductDescription').fadeIn();
-                $('#ShippingReturnInfoMobile').fadeOut();
-                $('.TabNavMobile .showrooms-links').fadeOut();
-            },function(){
-                $(this).parent().removeClass('showinfo');
-                $('#ProductTabsListMobile #ProductDescription').fadeOut();
-            });
-            $('.TabNavMobile li a:contains("Shipping")').toggle(function(){
-                $('.TabNavMobile li').removeClass('showinfo');
-                $(this).parent().addClass('showinfo');
-                $('#ProductTabsListMobile #ProductDescription').fadeOut();
-                $('#ShippingReturnInfoMobile').fadeIn();
-                $('.TabNavMobile .showrooms-links').fadeOut();
-            },function(){
-                $(this).parent().removeClass('showinfo');
-                $('#ShippingReturnInfoMobile').fadeOut();
-            });
-
-            $('.TabNavMobile li a:contains("Showrooms")').toggle(function(){
-                $('.TabNavMobile li').removeClass('showinfo');
-                $(this).parent().addClass('showinfo');
-                $('#ProductTabsListMobile #ProductDescription').fadeOut();
-                $('#ShippingReturnInfoMobile').fadeOut();
-                $('.TabNavMobile .showrooms-links').fadeIn();
-            },function(){
-                $(this).parent().removeClass('showinfo');
-                $('.TabNavMobile .showrooms-links').fadeOut();
+            $('.TabNavMobile li').on('click', function(){
+                $(this).toggleClass('showinfo');
+                $(this).next().slideToggle();
             });
         }else {
             $('#tabs-content .showrooms-links').hide();

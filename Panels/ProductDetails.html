@@ -57,10 +57,10 @@ var productId = %%GLOBAL_ProductId%%;
         </div>
         <div class="left-content-mobile">
             <div class="DetailRow product-heading">
+                <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
                 <div class="Value" style="display: %%GLOBAL_HideBrandLink%%" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
                     <h4 class="BrandName"><a itemprop="url" href="%%GLOBAL_BrandLink%%"><span itemprop="name">%%GLOBAL_BrandName%%</span></a></h4>
                 </div>
-                <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
             </div>
             <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
                 %%GLOBAL_LightBoxImageJavascript%%
@@ -87,7 +87,6 @@ var productId = %%GLOBAL_ProductId%%;
                     <meta itemprop="price" content="%%GLOBAL_RawProductPrice%%">
                 </div>
             </div>
-            %%SNIPPET_ProductAddToCartRight%%
             %%GLOBAL_AddThisLink%%
         </div>
         <!-- Product Details Content -->
@@ -141,4 +140,13 @@ var productId = %%GLOBAL_ProductId%%;
 
     </div>
 </div>
-
+<script type="text/javascript">
+    $(window).load(function () {
+        if($(window).width() < 767){
+            // Append right cart before addthis
+            var rightCart = $('.ProductMain .productAddToCartRight').html();
+            $('.left-content-mobile .AddThisButtonBox').before(rightCart);
+            $('.AddCartButton div.selector.fixedWidth').first().remove();
+        }
+    });
+</script>
