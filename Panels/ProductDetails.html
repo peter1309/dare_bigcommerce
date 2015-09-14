@@ -37,6 +37,14 @@ var productId = %%GLOBAL_ProductId%%;
         %%GLOBAL_ProductDetailFlashMessages%%
         <!-- left-content -->
         <div class="left-content">
+            <div class="DetailRow product-heading-mobile">
+                <div class="Value" style="display: %%GLOBAL_HideBrandLink%%" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                    <h4 class="BrandName"><a itemprop="url" href="%%GLOBAL_BrandLink%%"><span itemprop="name">%%GLOBAL_BrandName%%</span></a></h4>
+                </div>
+
+                <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
+
+            </div>
             <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
                 %%GLOBAL_LightBoxImageJavascript%%
                 %%SNIPPET_ProductThumbImage%%
@@ -54,40 +62,6 @@ var productId = %%GLOBAL_ProductId%%;
                 </div>
             </div>
             %%Panel.SideProductRelated%%
-        </div>
-        <div class="left-content-mobile">
-            <div class="DetailRow product-heading">
-                <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
-                <div class="Value" style="display: %%GLOBAL_HideBrandLink%%" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
-                    <h4 class="BrandName"><a itemprop="url" href="%%GLOBAL_BrandLink%%"><span itemprop="name">%%GLOBAL_BrandName%%</span></a></h4>
-                </div>
-            </div>
-            <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
-                %%GLOBAL_LightBoxImageJavascript%%
-                %%SNIPPET_ProductThumbImage%%
-                <div class="ImageCarouselBox clearfix" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
-                    <a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" /></a>
-                    <div class="ProductTinyImageList">
-                        <ul>
-                            %%SNIPPET_ProductTinyImages%%
-                        </ul>
-                    </div>
-                    <a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" /></a>
-                </div>
-                <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
-                    <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
-                </div>
-            </div>
-            <div class="DetailRow PriceRow p-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="%%GLOBAL_HidePrice%%">
-                <div class="Value">
-                    <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
-                    <span class="ProductPrice RetailPrice">%%GLOBAL_RetailPrice%%</span>
-                    <span class="s-price">%%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%</span>
-                    <meta itemprop="priceCurrency" content="%%GLOBAL_CurrentCurrencyCode%%">
-                    <meta itemprop="price" content="%%GLOBAL_RawProductPrice%%">
-                </div>
-            </div>
-            %%GLOBAL_AddThisLink%%
         </div>
         <!-- Product Details Content -->
         <div class="ProductMain">
@@ -141,12 +115,14 @@ var productId = %%GLOBAL_ProductId%%;
     </div>
 </div>
 <script type="text/javascript">
-    $(window).load(function () {
-        if($(window).width() < 767){
-            // Append right cart before addthis
-            var rightCart = $('.ProductMain .productAddToCartRight').html();
-            $('.left-content-mobile .AddThisButtonBox').before(rightCart);
-            $('.AddCartButton div.selector.fixedWidth').first().remove();
+    $(window).load(function() {
+        $('.ProductMain .addthis_button_google_plusone').remove();
+        var savePrice = $('.PriceRow .YouSave').text().trim();
+        var new_price = ' ';
+        if(savePrice != undefined && savePrice.length > 1){
+            new_price = savePrice.replace('(You save','SAVE');
+            new_price = new_price.replace(')','');
+            $('.PriceRow .YouSave').text(new_price);
         }
     });
 </script>

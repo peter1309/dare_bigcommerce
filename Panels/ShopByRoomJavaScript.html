@@ -1,50 +1,72 @@
 <script type="text/javascript">
     //<![CDATA[
-    $(document).ready(function(){
+    jQuery(window).load(function(){
         var baseLink = '%%GLOBAL_ShopPath%%';
         var activeLink = baseLink+'/mens';
-        $("#slider-shopby").load(baseLink+'/mens .ProductList');
+        // Init slider
+        function InitSliderShopBy(){
+            jQuery('#slider-shopby .ProductList').addClass('owl-carousel');
+            jQuery('#slider-shopby .ProductList').css('overflow','visible');
+            jQuery('#slider-shopby .ProductList').owlCarousel({
+                items: 6,
+                nav: true,
+                loop: true,
+                lazyLoad: true,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    768:{
+                        items:4
+                    },
+                    1025:{
+                        items:6
+                    }
+                }
+            });
+        }
+        jQuery('#slider-shopby').load(baseLink+'/homewares .ProductList', function(){
+            InitSliderShopBy();
+        });
+
         showByRoom();
-        $(window).resize(function(){
+
+
+        jQuery(window).resize(function(){
             showByRoom();
         });
+
         function showByRoom(){
-            if($(window).outerWidth() > 768){
-                $('#ShopByRoom ul.sf-menu  li').find('a').each(function(){
-                    $(this).attr('href','javascript:void(0)');
+
+            if(jQuery(window).outerWidth() > 767){
+                jQuery('#ShopByRoom ul.sf-menu  li').find('a').each(function(){
+                    jQuery(this).attr('href','javascript:void(0)');
                 });
             }
         }
-        $('#ShopByRoom ul.sf-menu li').find('ul').remove();
-        $('#ShopByRoom .btn-view-cat').attr('href',activeLink);
-        $('#ShopByRoom ul li:nth-child(2)').addClass('active');
-        $('#ShopByRoom ul li').find('a').each(function(){
-            $(this).click(function(){
-                var categoryName = $(this).text().toLowerCase().trim();
-                var currentLink = baseLink+'/'+categoryName;
-                $('#ShopByRoom ul.sf-menu li').removeClass('active');
-                $(this).parent().addClass('active');
-                $(this).parent().parent().parent().find('a.btn-view-cat').attr('href',currentLink);
-                $('#slider-shopby').load(baseLink+'/'+categoryName+'/'+ ' .ProductList');
-                setTimeout(function(){
-                    $('#slider-shopby .ProductList').owlCarousel({
-                        items: 6,
-                        nav: true,
-                        loop: true,
-                        lazyLoad: true,
-                        responsive:{
-                            0:{
-                                items:2
-                            },
-                            768:{
-                                items:4
-                            },
-                            1025:{
-                                items:6
-                            }
-                        }
-                    });
-                },500);
+
+        jQuery('#ShopByRoom ul.sf-menu li').find('ul').remove();
+        jQuery('#ShopByRoom .btn-view-cat').attr('href',activeLink);
+        jQuery('#ShopByRoom ul li:nth-child(4)').addClass('active');
+
+        jQuery('#ShopByRoom ul li').find('a').each(function(){
+            jQuery(this).click(function(){
+                firstNode = jQuery(this).contents().get(0);
+                if(typeof(firstNode)=='undefined'){
+                    name = jQuery(this).text();
+                }else{
+                    name = firstNode.nodeValue;
+                }
+                name = name.toLowerCase().trim();
+                var currentLink = baseLink+'/'+name;
+                jQuery('#ShopByRoom ul.sf-menu li').removeClass('active');
+                jQuery(this).parent().addClass('active');
+                jQuery(this).parent().parent().parent().find('a.btn-view-cat').attr('href',currentLink);
+
+                // Load product from category name
+                jQuery('#slider-shopby').load(baseLink+'/'+name+'/'+' .ProductList', function(){
+                    InitSliderShopBy();
+                });
             });
         });
     });

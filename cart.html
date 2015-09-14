@@ -10,7 +10,8 @@
                         %%Panel.CartBreadcrumb%%
                         <div class="fullwidth">
                             %%Panel.CartStatusMessage%%
-                            %%Panel.CartContent%%
+                            <div class="CartContentDesktop">%%Panel.CartContent%%</div>
+                            <div class="CartContentMobileOnly">%%Panel.CartContentMobile%%</div>
                             <div class="CartCode cf">
                                 %%Panel.CartCouponCodeBox%%
                                 %%Panel.CartGiftCertificateCodeBox%%
@@ -24,3 +25,56 @@
         </div>
     </body>
 </html>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#CartContent .PayPalExpressCheckout > p:first-child').text('OR');
+        var width = $(window).width();
+        editCart();
+        detectLayout();
+        $(window).resize(function(){
+            editCart();
+        });
+        function editCart(){
+            if(width == 480){
+                $('.SubTotal td:first-child').attr('colspan','4');
+                $('.EstimateShippingArea td:first-child').attr('colspan','5');
+                $('.gtotal td:first-child').attr('colspan','5');
+                $('.SubTotal:last-child td:first-child').attr('colspan','4');
+                $('#CouponArea td:first-child').attr('colspan','4');
+            }
+        }
+        function detectLayout(){
+            if(width > 767){
+                $('.CartContentMobileOnly').remove();
+            }else{
+                $('.CartContentDesktop').remove();
+            }
+        }
+        //Append column
+        if(width < 767){
+            var content = [];
+            $('.CartContents .CartThumb').each(function(){
+                content.push($(this).html());
+            });
+            $.each(content, function(index , val){
+                $('.CartContents .ProductName').each(function(i){
+                    if(index == i){
+                        $(this).prepend(val);
+                        $(this).next('a').append('<br/>');
+                        $(this).parent().find('.CartThumb').remove();
+                        return false;
+                    }
+                });
+                return;
+            });
+        }
+        // Append Secure Payment
+        var baseLink = '%%GLOBAL_ShopPath%%';
+        $('.CartCode.cf').append('<div id="SecurePaymentArea"></div>');
+        $('.CartCode.cf').append($('#SecurePaymentArea').load(baseLink+'/secure-payment/' + ' .securePaymentContent' ));
+
+        // Replace image checkout with paypal
+        var imgPath = '%%ASSET_images/btn-paypal.png%%';
+        $('#CartContent .PayPalExpressCheckout form').find('input[type="image"]').attr('src',imgPath);
+    });
+</script>

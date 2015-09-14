@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#SimilarMultiProductsByCustomerViews .ProductList').owlCarousel({
+            items : 5,
+            pagination : false,
+            autoPlay : true,
+            loop : true,
+            navigation : true,
+            navigationText: [
+                "<i class='flex-prev'><</i>",
+                "<i class='flex-next'>></i>"
+            ],
+            stopOnHover : true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1025:{
+                    items:5
+                }
+            }
+        });
+    });
+</script>

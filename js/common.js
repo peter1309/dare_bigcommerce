@@ -744,7 +744,7 @@ $(document).ready(function() {
 	});
 
 	// generic checkbox => element visibility toggle based on id of checkbox and class names of other elements
-	$('.CheckboxTogglesOtherElements').live('change', function(event){
+	$('.CheckboxTogglesOtherElements').on('change', function(event){
 		if (!this.id) {
 			return;
 		}
@@ -816,7 +816,7 @@ if (typeof Date.prototype.setISO == 'undefined') {
  * This disables the process payment button. It's here because otherwise it'd require a template
  * change to about 20 files.
  */
-$('form[action$="process_payment"]').live('submit', function(ev){
+$('form[action$="process_payment"]').on('submit', function(ev){
 	if (ev.isDefaultPrevented()) {
 		return;
 	}
@@ -844,7 +844,7 @@ $('form[action$="process_payment"]').live('submit', function(ev){
 });
 
 // TODO: rewirte this
-$('#OrderConfirmationForm').live('submit', function(ev){
+$('#OrderConfirmationForm').on('submit', function(ev){
 	if (ev.isDefaultPrevented()) {
 		return;
 	}

@@ -1,0 +1,6 @@
+#find-out-first { display: none;}
+#find-out-first {background: none;border:  1px solid #ccc;box-sizing: border-box;height: 100%;outline: none;overflow: auto;padding: 70px 20px;width: 100%;}
+.banner-popup { float: left;width: 50%;}
+.content-popup {  float: left;width: 50%;}
+.content-popup #SignupButton {border: 1px solid #000;}
+.content-popup #nl_email {border : 0;float: left;margin-right: 0;}

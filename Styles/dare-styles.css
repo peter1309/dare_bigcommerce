@@ -1,6 +1,14 @@
 .TitleHeading{ font-size: 60px; border-bottom: 3px solid #222; letter-spacing:-2px;}
 .top-slide{border-bottom: 1px solid #222; margin-bottom: 30px;}
+.Breadcrumb li{ padding: 0 6px 0 0}
+.Breadcrumb li a{ padding-right: 12px;}
+.footer-links .inner a span{ font-weight: 300; font-size: 10px;}
+.footer .one-quarter{ float: left;}
+div.checker span{ vertical-align: top;}
+input.Textbox, textarea, input[type="text"], input[type="password"]{ line-height: 19px; padding: 8px 10px;}
+
 /*Login page*/
+.one-half{ float: left;}
 #LogInPage .grid__item{ font-size: 12px;}
 #LogInPage .CreateAccount h3, #LogInPage .AccountLogin h3,  #CreateAccountPage .FormContainer h3{ font-size: 18px; font-weight: 300;}
 #LogInPage .btn.alt{ border: 1px solid #000; text-decoration: none; font-family: 'Montserrat', sans-serif;font-size : 14px;font-weight : 400; color: #222; line-height: 32px;}
@@ -19,6 +27,13 @@
 #CreateAccountPage  #FormField_13{ width: 76% !important;}
 
 /*Product page*/
+.productPage #ProductDetails .ProductThumbImage {display:block;height: 750px;overflow: hidden;margin-bottom: 15px;}
+.productPage .ProductThumbImage a {display: inline;}
+#ProductDetails .ProductThumbImage img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);}
+.productPage .product-heading-mobile {display : none;}
+.productPage .btn-product-zoom {float : left; margin : -40px 0 0 0;position:relative;}
+.productPage .btn-product-zoom span {font-size : 10px;}
+.productPage .btn-product-zoom img { margin-right : 10px; vertical-align : bottom;}
 .productPage #CategoryDrivers ul > li:nth-child(3),
 .productPage #CategoryDrivers ul > li:nth-child(4),
 .productPage #x3-row { display : none;}
@@ -26,22 +41,19 @@
 .productPage .addto .BulkDiscount,
 .productPage .addto #SideProductAddToWishList {width : 100%;display : block;}
 .productPage .PrimaryProductDetails .btn.add-to-cart,
-.productPage .addto #SideProductAddToWishList input { width : 100%;}
+.productPage .addto #SideProductAddToWishList input { width : 99%;}
 .productPage .left-content { width : 63%;}
 .productPage .PrimaryProductDetails .ProductMain { width : 34%;padding : 0;}
 .productPage .PrimaryProductDetails .btn.add-to-cart {font-family: 'Montserrat', sans-serif;font-size : 18px;font-weight : 700;color : #fff;background-color : #000000;min-height : 50px;}
 .productPage .addto #SideProductAddToWishList input {font-family: 'Montserrat', sans-serif;font-size : 14px;font-weight : 400;color : #242424;min-height : 50px; border:1px solid #000;}
-.productPage .addto #SideProductAddToWishList:hover{ box-shadow: 2px 3px 0 0 #000;}
+.productPage .addto #SideProductAddToWishList input:hover{ box-shadow: 2px 3px 0 0 #000; -webkit-box-shadow: 2px 3px 0 0 #000;}
 .productPage .addto {border-top : none;}
 .productPage #ProductDetails h1 { color : #222222;font-family: 'Montserrat', sans-serif;font-size : 60px;font-weight : 400;text-transform : capitalize;line-height : 60px; letter-spacing : 0.5px; }
-.productPage #SideProductRelated h2 {color : #000000;font-size : 30px;font-weight : 900; border-bottom: 4px solid #222;}
+.productPage #SideProductRelated h2 {color : #000000;font-size : 30px;font-weight : 900; border-bottom: 4px solid #222;margin-bottom: 5px;}
 .productPage .left-content .ProductList .ProductImage a { height : auto;}
 .productPage .PrimaryProductDetails .ProductPrice{ font-size: 18px; color: #222; font-family: "Lato",Arial,Sans-serif; font-weight:700;}
 .productPage .PrimaryProductDetails .RetailPrice{ font-size: 12px; color: #666; font-weight: 400;}
-.productPage .ProductDetailsGrid .s-price .YouSave, .PrimaryProductDetails .YouSave{ text-transform: uppercase; color: #b33a2b; font-size: 14px; font-family: "Lato",Arial,Sans-serif; font-weight: 700;}
-.productPage .Breadcrumb li{ padding: 0 6px 0 0}
-.productPage .Breadcrumb li a{ padding-right: 10px;}
-.productPage div.selector{ background: #fff url(../images/icon_arrow_down.png) no-repeat 90% center !important;}
+.productPage .ProductDetailsGrid .s-price .YouSave, .PrimaryProductDetails .YouSave{ text-transform: uppercase; color: #b33a2b; font-size: 14px; font-family: "Lato",Arial,Sans-serif; font-weight: 900;}
 .productPage .addthis_default_style .at4-icon{ width: 32px; height: 32px; background-size: 32px !important;}
 .productPage .TabNav{border-bottom: 1px solid #000; padding: 0 2%; width: 96%; display: inline-block; text-align: center;}
 .productPage .TabNav li{ width: 32%; text-align: center;}
@@ -63,9 +75,10 @@
 .productPage .ProductDescription{ color: #222; font-size: 12px; font-family:"Lato",Arial,Sans-serif; font-weight: 400; letter-spacing: 0.5px;}
 .productPage .ProductDescription strong{ text-transform: uppercase;}
 .productPage .productOptionPickListSwatch .swatchColours{ border: none !important; }
+.productPage .productOptionPickListSwatch .selectedValue{ border: 1px solid; display : inline-block;}
 .productPage .productOptionPickListSwatch .swatchColour{ width: 56px !important; height: 56px !important;}
 .productPage .ProductDetailsGrid .Label, .productPage .productAttributeList .productAttributeLabel label{ font-weight: 400; font-family: "Lato",Arial,Sans-serif; font-size: 12px; color: #666;}
-.productPage #ProductDetails .ProductTinyImageList ul li{ margin: 0 20px 0 0;}
+.productPage #ProductDetails .ProductTinyImageList ul li{ margin: 0 10px 0 0;}
 .productPage #ProductDetails .ProductTinyImageList ul li a{ border: 1px solid #e5e5e5; width: 108px; height: 108px;}
 .productPage #ProductDetails .ProductTinyImageList img{ height: 108px;}
 .productPage #ProductDetails .ProductTinyImageList ul li a:hover{ border: 1px solid #000;}
@@ -73,14 +86,21 @@
 .productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{top: -66px;}
 .productPage #SideProductRelated .owl-nav .owl-prev{ left: auto; right: 8%;}
 .productPage #SideProductRelated .owl-nav .owl-next{ right: 0;}
-.productPage .ImageCarouselBox{ position: relative;}
+.productPage .ImageCarouselBox{ position: relative; padding-left: 11px !important;}
 .productPage .ProductTinyImageList{ width: 90%; margin: 0 5%;}
 .productPage #ImageScrollPrev{ position: absolute; left:0;}
 .productPage #ImageScrollNext{ position: absolute; right: 0;}
 .productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{display: none;}
 .productPage #ShippingReturnInfo .main .inner{ border:none; margin:0; padding:0;}
 .productPage #ShippingReturnInfo .main .inner #PageBreadcrumb, .productPage #ShippingReturnInfo .main .inner .TitleHeading{ display: none;}
+.productPage .left-content .ProductList .ProductDetails .pname{ display: block; text-align: center; font-size: 13px;}
+.productPage .left-content .ProductList em{ font-weight: 700;}
+.productPage .DetailRow.qty .selector{ color: #999;}
+.fastCartSummaryBox .actionLink .btn:hover, .fastCartSummaryBox .ProceedToCheckout a:hover{ background: #000;}
+.fastCartSummaryBox .actionLink .btn.alt{ background: #fff;}
 
+/*Category page*/
+.productlist-page #CategoryContent .ProductList .ProductActionAdd .btn:hover{ box-shadow: 2px 3px 0 0 #000;}
 
 /*Checkout page*/
 #HeaderCheckoutPage{ margin-bottom: 40px;}
@@ -103,6 +123,7 @@
 .ExpressCheckout #CheckoutStepConfirmation table.CartContents em, #CheckoutStepConfirmation .SubTotal td em{ font-style: normal;}
 .ExpressCheckout #CheckoutStepConfirmation .SubTotal td strong{ font-size: 16px;}
 .ExpressCheckout #CheckoutStepConfirmation #bottom_payment_button{ margin-right: 2%;}
+
 .CartContents thead {
     background: none;
     text-transform: uppercase;
@@ -117,27 +138,27 @@ table.CartContents tbody tr td{
 }
 
 /*Shopping cart*/
-#CartContent{ width: 75%; float: left;}
-#CartContent .CartContents thead{ background: none;}
-#CartContent .CartContents th{ text-transform: uppercase; font-size: 12px; font-weight: 900; color: #000; border-bottom: 1px solid #000; text-align: center;}
-#CartContent table.CartContents tbody tr td{ text-align: center; border: none; font-size: 12px; color: #222; font-weight: 400;}
-#CartContent .CartContents th:first-child, #CartContent table.CartContents tbody tr td:first-child{ text-align: left;}
-#CartContent .CartContents .ProductName a{ float: left; margin-right: 20px;  color: #222; text-transform: uppercase; font-size:13px; font-weight: 400;}
-#CartContent .CartContents .ProductName a.CustomizeItemLink{ text-transform: none; text-decoration: underline;}
-#CartContent .CartContents .ProductPrice{ font-style: normal;}
-#CartContent .BlockContent img{ width: 100px;}
-#CartContent .CartContents tbody tr{ border-bottom: 1px solid #000;}
-#CartContent .CartContents tbody tr.Last{ border-bottom: none;}
-#CartContent .CartContents tfoot .SubTotal td div{ font-size: 16px; text-transform: none;}
-#CartContent .CartContents tfoot .First td:first-child div{ padding-right: 40px;}
-#CartContent .CartContents tfoot .gtotal  td div em{ padding-left: 40px;}
-#CartContent .CartContents tfoot .SubTotal td {
+.shopping_cart{ width: 75%; float: left;}
+.shopping_cart .CartContents thead{ background: none;}
+.shopping_cart .CartContents th{ text-transform: uppercase; font-size: 12px; font-weight: 900; color: #000; border-bottom: 1px solid #000; text-align: center;}
+.shopping_cart table.CartContents tbody tr td{ border: none; font-size: 12px; color: #222; font-weight: 400;}
+.shopping_cart .CartContents th:first-child, .shopping_cart table.CartContents tbody tr td:first-child{ text-align: left;}
+.shopping_cart .CartContents .ProductName a{ float: left; margin-right: 20px;  color: #222; text-transform: uppercase; font-size:13px; font-weight: 400;}
+.shopping_cart .CartContents .ProductName a.CustomizeItemLink{ text-transform: none; text-decoration: underline;}
+.shopping_cart .CartContents .ProductPrice{ font-style: normal;}
+.shopping_cart .BlockContent img{ width: 100px;}
+.shopping_cart .CartContents tbody tr{ border-bottom: 1px solid #000;}
+.shopping_cart .CartContents tbody tr.Last{ border-bottom: none;}
+.shopping_cart .CartContents tfoot .SubTotal td div{ font-size: 16px; text-transform: none;}
+.shopping_cart .CartContents tfoot .First td:first-child div{ padding-right: 40px;}
+.shopping_cart .CartContents tfoot .gtotal  td div em{ padding-left: 40px;}
+.shopping_cart .CartContents tfoot .SubTotal td {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
-#CartContent .CartContents .CartRemoveLink{ background: url(../images/btn-remove.png) center center no-repeat;}
-#CartContent .CartContents .btn.alt{ border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222; }
-#CartContent .ProceedToCheckout .CheckoutButton .btn{
+.shopping_cart .CartContents .CartRemoveLink{ background: url(%%ASSET_images/btn-remove.png%%) center center no-repeat;}
+.shopping_cart .CartContents .btn.alt{ border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222; }
+.shopping_cart .ProceedToCheckout .CheckoutButton .btn{
     background-color: #000;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -147,13 +168,14 @@ table.CartContents tbody tr td{
     letter-spacing: 0;
     padding: 0 40px;
 }
-#CartContent .btn-updatecart, #CartContent .KeepShopping a{ background: none; border: none; color: #000; text-transform: none; text-decoration: underline; font-family: "Lato",Arial,Sans-serif; font-weight: 400;}
-#CartContent .KeepShopping{ float: left; margin-right: 35px; text-align: left;}
-#CartContent #cartForm div.GroupButton{ float: left; margin-top: 15px;}
+.shopping_cart .btn-updatecart, .shopping_cart .KeepShopping a{ background: none; border: none; color: #000; text-transform: none; text-decoration: underline; font-family: "Lato",Arial,Sans-serif; font-weight: 400;}
+.shopping_cart .btn-updatecart:hover{ cursor:pointer;}
+.shopping_cart .KeepShopping{ float: left; margin-right: 35px; text-align: left;}
+.shopping_cart #cartForm div.GroupButton{ float: left; margin-top: 15px;}
 .CartCode { width: 23%; margin-left:2%; float:left;  margin-top: 49px;}
 .CartCode h3{ border-bottom: 3px solid #222;  padding: 0 0 15px 0; margin-bottom: 15px;}
 .CartCode .CouponCode, .CartCode .GiftCertificate{ width: 100%;}
-.CartCode input{ height: 40px; line-height: 40px; width: 75%;}
+.CartCode input{ height: 40px; line-height: 24px; width: 75%;}
 .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ background: #fff; border: 1px solid #000; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 14px; color: #222;  letter-spacing: -0.5px;    width: 48px; height: 40px; line-height: 40px; margin-left: 10px;}
 .CartCode .GiftCertificate, .CartCode #SecurePaymentArea{ margin-top: 25px; float: left;}
 .CartCode #SecurePaymentArea .img-secure{ margin-bottom: 20px;}
@@ -163,7 +185,7 @@ table.CartContents tbody tr td{
     .TitleHeading{ font-size: 48px; letter-spacing:0;}
     .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width:99% !important;}
     .CartCode{ margin-top: 34px;}
-    .CartCode input{ height: 35px; line-height: 35px;}
+    .CartCode input{ height: 35px; line-height: 24px;}
     .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 40px; height: 35px; line-height: 35px;}
 }
 
@@ -174,13 +196,32 @@ table.CartContents tbody tr td{
     .TitleHeading{ font-size: 36px;}
     .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{ width: 99% !important;}
     .CartCode{ margin-top: 20px;}
-    .CartCode input { height: 30px;line-height: 30px; width: 68%;}
+    .CartCode input { height: 30px;line-height: 24px; width: 68%;}
     .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn{ width: 35px; height: 30px; line-height: 30px; font-size: 12px;}
 }
-
+@media only screen and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait) {
+    .productPage .PrimaryProductDetails .ProductMain { width : 100%;}
+    .productPage #ProductDetails h1 { font-size : 40px;}
+    .productPage #ShippingReturnInfo, .showrooms-links { padding : 20px;}
+    .productPage .left-content #SideProductRelated, .productPage .ProductMain-Mobile #ProductTabs , .ProductMain .product-heading{ display: none;}
+    .productPage .PrimaryProductDetails .ProductMain-Mobile, .productPage .product-heading-mobile { display: block;}
+    .ContentStoreLocator .store-info .grid__item {width:50%;}
+    .ContentStoreLocator .store-info .grid__item:last-child {width:100%;}
+    .ContentStoreLocator .store-info .grid__item a img { width:100%;height:auto;}
+    #AccountInbox .form li label, .form dt { padding : 7px 12px 0 0;}
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+    .CartCode #SecurePaymentArea img{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 767px){
-    .productPage #ProductDetails .left-content-mobile, .productPage .PrimaryProductDetails .ProductMain-Mobile{ display:block;}
-    .productPage #ProductDetails .left-content, .productPage .PrimaryProductDetails .ProductMain{display:none;}
+    .productPage .btn-product-zoom, .ProductMain .product-heading {display : none;}
+    #ProductBreadcrumb, .productPage .product-heading-mobile { display: block;}
+    .productPage #PromArea { display: none;}
+    .productPage .PrimaryProductDetails .ProductMain-Mobile{ display:block;}
+    .productPage .left-content #SideProductRelated{ display: none;}
+    .productPage .PrimaryProductDetails .ProductMain{ width: 100%;}
     .productPage #ProductDetails h1{ font-size: 30px; line-height:35px;}
     .productPage #SideProductRelated h2{font-size: 22px; border: none; text-align: center;}
     .productPage #SideProductRelated .owl-nav .owl-prev, .productPage #SideProductRelated .owl-nav .owl-next{ top: -52px;}
@@ -206,6 +247,14 @@ table.CartContents tbody tr td{
     .productPage #ProductTabsListMobile > li a:link, .productPage #ProductTabsListMobile > li a:visited, .productPage #ProductTabsListMobile > li a:active, .productPage #ProductTabsListMobile > li a:hover{ background: none;}
     .productPage #ProductTabsListMobile .main .inner{ border:none; margin:0; padding:0;}
     .productPage #ProductTabsListMobile .main .inner #PageBreadcrumb, .productPage #ProductTabsListMobile .main .inner .TitleHeading{ display: none;}
+    .productPage .AddThisButtonBox{ margin: 0 0 35px 0 !important;}
+    .productPage .flexslider{ margin: 0;}
+    .productPage .inner .Block{ margin-bottom: 0;}
+    .productPage .ProductList li{ padding: 0 10px; margin: 0 5px; border: 1px solid #f7f7f7;}
+    .productPage .ProductList em{padding-top: 5px; font-weight: 700;}
+    .productPage #tabs-content, #ProductTabsList {display : none;}
+    .owl-loaded .owl-item:nthchild(2n){ ma}
+    #related-product-slider .ProductList .owl-item > li{ width: 95% !important;}
     .TitleHeading{font-size: 30px; padding: 0 0 10px 0;}
     #HeaderCheckoutPage{ margin-bottom: 10px;}
     #HeaderCheckoutPage #Header{ background: #040707; position: static; height: auto;}
@@ -221,13 +270,47 @@ table.CartContents tbody tr td{
     #HeaderCheckoutPage #ToggleMenu span{ color: #fff;}
     .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent input.btn{ font-size: 12px; letter-spacing: 0;}
     .ExpressCheckout #CheckoutStepConfirmation table.CartContents{ width: 96%;}
-    #CartContent, .CartCode{width: 100%;}
-    #CartContent .ProceedToCheckout{ float: left; margin-top: 30px; width: 100%;}
+    .shopping_cart, .CartCode{width: 100%;}
+    .shopping_cart .ProceedToCheckout{ float: left; margin-top: 30px; width: 100%;}
+    #AccountInbox .btn, .btn.alt, textarea, input[type="email"], input[type="text"], input[type="password"], input.Textbox{ height: 36px; line-height: 36px; font-size: 12px !important;width:100%;margin:10px 0;box-sizing:border-box;}
+    #AccountInbox .form li label, .form dt { width : auto;}
+    #AccountInbox div.selector { width : 100%;}
+    #AccountOrderStatus .li-list h4 { margin-top : 30px;}
+    #AccountOrderStatus .li-list form { width:100%;}
+    #AccountOrderStatus .btn, .btn.alt, textarea, input[type="email"], input[type="text"], input[type="password"], input.Textbox{ width : 100%;margin:0;}
+    #AccountOrderStatus .btns {position : static;width:100%;}
+    #WishListEditFrom form .HorizontalFormContainer dd { margin-left : 0;}
+    #WishListEditFrom .HorizontalFormContainer dt { text-align : left;}
+    #WishListEditFrom .btn { width : 100%;}
+    .AccountLogin .actions a {line-height:40px;}
+    #LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password] { width : 100%;}
+    #CartEditProductFieldsForm #ModalButtonRow .FloatLeft {float:none;margin-bottom:10px;}
+    #CartEditProductFieldsForm #ModalButtonRow .btn {width:100%;}
+
+    /* fix bug shopping cart for mobile */
+    .shopping_cart #cartForm div.GroupButton{
+        float: none;
+    }
+
+.productPage #ProductDetails .ProductThumbImage{height: auto;overflow; inherit;}
+#ProductDetails .ProductThumbImage img{position: static;transform: none;-webkit-transform: none;-ms-transform: none;}
+
 }
 
-@media screen and (max-width: 480px){
+@media only screen and (min-device-width: 480px)  and (max-device-width: 767px) {
+    .shopping_cart table.CartContents tbody tr td{
+        vertical-align: middle;
+    }
+    .shopping_cart table.CartContents tbody tr td div.selector{
+        margin-bottom: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 479px){
     #LogInPage .TitleHeading, #CreateAccountPage .TitleHeading{ font-size: 30px;}
-    #LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ width: 100%; height: 36px; line-height: 36px; font-size: 12px !important;}
+    #LogInPage .login-form input[type=email], #LogInPage .login-form input[type=password]{ height: 36px; line-height: 36px; font-size: 12px !important;}
     #LogInPage .btn.alt{ height: auto;}
     #CreateAccountPage .FormContainer .box.borderB, #CreateAccountPage .FormContainer .box.bottom-form{ width: 100%; float: left;}
     #CreateAccountPage .FormContainer .box input, #CreateAccountPage .FormContainer .box div.selector{ height: 36px; line-height: 36px;}
@@ -237,10 +320,63 @@ table.CartContents tbody tr td{
     .ExpressCheckout .ExpressCheckoutBlock .ExpressCheckoutContent div.selector{width:89% !important}
     .ExpressCheckout #CheckoutStepConfirmation table.CartContents {width: 93%;}
     .ExpressCheckout #CheckoutStepConfirmation textarea{ width: auto;}
-    .PayPalExpressCheckout input{ width: 100%;}
-    #CartContent .ProceedToCheckout .CheckoutButton { padding:0;}
-    #CartContent .ProceedToCheckout .CheckoutButton .btn{ height: 45px; line-height: 45px; margin:0}
-    #CartContent .col-mobile{ display: none;}
-    #CartContent .ProceedToCheckout{ width: auto;}
+    .shopping_cart .ProceedToCheckout .CheckoutButton { padding:0;}
+    .shopping_cart .ProceedToCheckout .CheckoutButton .btn{ height: 45px; line-height: 45px; margin:0}
+    .shopping_cart .col-mobile{ display: none;}
     .btn{ letter-spacing: 0;}
+
+/* fix bug shopping cart for mobile */
+    .shopping_cart .CartContents > thead {
+        display: none !important;
+    }
+    .shopping_cart table.CartContents{
+        display: block;
+        width: 100%;
+    }
+    .shopping_cart table.CartContents > tbody {
+        display: block;
+    }
+    .shopping_cart table.CartContents > tfoot{
+        display: table;
+        width: 100%;
+    }
+    .shopping_cart table.CartContents > tbody > tr {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+    .shopping_cart table.CartContents > tbody > tr > td {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .shopping_cart .CartContents .ProductName a{
+        display: block;
+        text-align: center;
+        float: none;
+        margin-right: 0;
+    }
+    .shopping_cart .productAttributes{
+        margin: 10px auto;
+    }
+    .shopping_cart .CartContents .CartRemoveLink{
+        float: none;
+        display: inline-block;
+    }
+    .shopping_cart .CartContents div.selector{
+        margin-bottom: 0;
+    }
+    .shopping_cart .AlternativeCheckout p.PTB20{
+        padding: 10px 0;
+    }
+    .shopping_cart .BlockContent img{ width: auto; max-with: 100%;}
+
+}
+
+
+@media screen and (max-width: 320px){
+    .productPage #ProductDetails .ProductTinyImageList ul li{ margin: 0;}
+    #ChooseShippingAddress > h2 { font-size : 28px;}
 }

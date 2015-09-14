@@ -1,27 +1,32 @@
 <script type="text/javascript">
     $(window).load(function () {
         $('#CartContent .PayPalExpressCheckout > p:first-child').text('OR');
-        //Append column
-        var content = [];
-        $('.CartContents .CartThumb').each(function(){
-            content.push($(this).html());
+        editCart();
+        $(window).resize(function(){
+            editCart();
         });
-        $.each(content, function(index , val){
-            $('.CartContents .ProductName').each(function(i){
-                if(index == i){
-                    $(this).prepend(val);
-                    $(this).next('a').append('<br/>');
-                    $(this).parent().find('.CartThumb').remove();
-                    return false;
-                }
-            });
-            return;
-        });
+        function editCart(){
+            var width = $(window).width();
+            if(width == 480){
+                $('.SubTotal td:first-child').attr('colspan','4');
+                $('.EstimateShippingArea td:first-child').attr('colspan','5');
+                $('.gtotal td:first-child').attr('colspan','5');
+                $('.SubTotal:last-child td:first-child').attr('colspan','4');
+                $('#CouponArea td:first-child').attr('colspan','4');
+            }else {
+                $('.SubTotal td:first-child').attr('colspan','5');
+                $('.EstimateShippingArea td:first-child').attr('colspan','6');
+                $('.gtotal td:first-child').attr('colspan','6');
+                $('.SubTotal:last-child td:first-child').attr('colspan','5');
+                $('#CouponArea td:first-child').attr('colspan','5');
+            }
+        }
+
         // Append Secure Payment
         var baseLink = '%%GLOBAL_ShopPath%%';
         $('.CartCode.cf').append('<div id="SecurePaymentArea"></div>');
         $('.CartCode.cf').append($('#SecurePaymentArea').load(baseLink+'/secure-payment/' + ' .securePaymentContent' ));
-        
+
         // Replace image checkout with paypal
         var imgPath = '%%ASSET_images/btn-paypal.png%%';
         $('#CartContent .PayPalExpressCheckout form').find('input[type="image"]').attr('src',imgPath);

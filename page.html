@@ -24,6 +24,48 @@
                 </div>
             </div>
             %%Panel.Footer%%
+            <a href="javascript:void(0)" class="backToTop"></a>
         </div>
+        <!-- Start of LiveChat (www.livechatinc.com) code -->
+        <script type="text/javascript">
+            var __lc = {};
+            __lc.license = 6505221;
+            
+            (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+            })();
+        </script>
+        <!-- End of LiveChat code -->
     </body>
 </html>
+<script type="text/javascript">
+    $(window).load(function(){
+        var scrollTop = $(".backToTop");
+        $(window).scroll(function(){
+            var topPos = $(this).scrollTop();
+
+            if(topPos > 100){
+                $(scrollTop).css("opacity", "1");
+
+            }else{
+                $(scrollTop).css("opacity", "0");
+            }
+
+        });
+        $(scrollTop).click(function(){
+            $('html, body').animate({scrollTop : 0},800);
+            return false;
+
+        });
+        var storeElement = $('.SideLeftStore');
+        if(storeElement != undefined){
+            storeElement.parent().parent().parent().find('.TitleHeading').hide();
+            $('.ContentStoreLocator .store-name').click(function(){
+                $(this).toggleClass('expended');
+                $(this).next('.store-info').slideToggle();
+            });
+        }
+    });
+</script>

@@ -1,13 +1,13 @@
 
 <div class="TopMenu">
     <div class="topmenu-mb">
-        <div class="phoneIcon"><span class="js-drawermenu-store-phone">%%GLOBAL_StorePhoneNumber%%</span></div>
+            <div class="phoneIcon"><span class="js-drawermenu-store-phone">Customer hotline 1300 113 273</span></div>
         <div class="store-locate-mb"><a href="%%GLOBAL_ShopPath%%/store-locations/">Store Locations</a></div>
     </div>
     <div class="inner">
         <ul style="display:%%GLOBAL_HidePurchasingOptions%%">
-              <li class="js-drawermenu-store-phone-container"  %%GLOBAL_ShowStorePhoneNumber%%>
-            <div class="phoneIcon"><span class="js-drawermenu-store-phone">%%GLOBAL_StorePhoneNumber%%</span></div>
+              <li class="js-drawermenu-store-phone-container">
+            <div class="phoneIcon"><span class="js-drawermenu-store-phone">Customer hotline 1300 113 273</span></div>
             </li>
             <li class="top-header-search">
                 %%Panel.HeaderSearch%%
@@ -28,3 +28,41 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    $(window).load(function () {
+        // Re-format item in cart
+        var temp_text = "%%GLOBAL_CartItems%%";
+        var new_text = " ";
+        if($(window).width() < 767){
+            if(temp_text !== undefined && temp_text.length > 0){
+                if(temp_text.trim() == '(1 item)'){
+                    new_text = temp_text.replace(' (','');
+                    new_text = new_text.replace('item)','');
+                    $('.CartLink span').text(new_text);
+                }else
+                {
+                    new_text = temp_text.replace(' (','');
+                    new_text = new_text.replace(' items)','');
+                    $('.CartLink span').text(new_text);
+                }
+            }else{
+                $('.CartLink span').text('0');
+            }
+        }else {
+            if(temp_text !== undefined && temp_text.length > 0){
+                if(temp_text.trim() == '(1 item)'){
+
+                    new_text = temp_text.replace(' (','');
+                    new_text = new_text.replace('item)','item');
+                    $('.CartLink span').text(new_text);
+                }else{
+                    new_text = temp_text.replace(' (','');
+                    new_text = new_text.replace(' items)',' item(s)');
+                    $('.CartLink span').text(new_text);
+                }
+            }else{
+                $('.CartLink span').text('0');
+            }
+        }
+    });
+</script>

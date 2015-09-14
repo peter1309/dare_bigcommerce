@@ -61,15 +61,6 @@
             </div>
         </div>
 
-        <div class="DetailRow InventoryLevel" style="%%GLOBAL_HideCurrentStock%%">
-            <div class="Label">%%GLOBAL_CurrentStockLabel%%:</div>
-            <div class="Value">
-                <span class="VariationProductInventory">
-                    %%GLOBAL_InventoryList%%
-                </span>
-            </div>
-        </div>
-
         <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%">
             <div class="Label">%%LNG_GiftWrapping%%:</div>
             <div class="Value">
@@ -100,6 +91,7 @@
                 <div class="clear"></div>
             </div>
         </div>
+        <div class="Label InventoryLevel" style="%%GLOBAL_HideCurrentStock%%"><span class="label">In Stock: </span><span class="value">%%GLOBAL_InventoryList%%</span></div>
 
         <div class="OutOfStockMessage InfoMessage ErrorMessage">
             %%SNIPPET_SideAddItemSoldOut%%

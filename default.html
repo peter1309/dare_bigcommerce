@@ -16,10 +16,21 @@
         </div>
     </div>
     %%Panel.Footer%%
-    <a href="javascript:void(0)" class="backToTop">Top</a>
+    <a href="javascript:void(0)" class="backToTop"></a>
 </div>
-</body>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
+var __lc = {};
+__lc.license = 6505221;
+
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<!-- End of LiveChat code -->
+    <script type="text/javascript">
     $(window).load(function(){
         var scrollTop = $(".backToTop");
         $(window).scroll(function(){
@@ -40,4 +51,31 @@
         });
     });
 </script>
+<script type="text/javascript" src="%%ASSET_js/jquery.simplemodal.js%%"></script>
+<script type="text/javascript" src="%%ASSET_js/jquery.signup.popup.js%%"></script>
+<script type="text/javascript" src="%%ASSET_js/jquery.cookie.js%%"></script>
+<div id="find-out-first">
+    <div class="banner-popup">
+        <a><img src="%%ASSET_images/img-signup-popup.jpg%%"></a>
+    </div>
+    <div class="content-popup">
+        <p>Join the party.</p>
+        <h2>Signup &amp; get $30 off <br>your next order</h2>
+        <form id="subscribe_form_overlay" action="/subscribe.php" method="post" name="subscribe_form_overlay"><input type="hidden" name="action" value="subscribe">
+            <table border="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <td><div class="FormContainer">
+                        <fieldset>
+                            <input id="nl_email" class="Textbox placeholder" type="text" name="nl_email">
+                            <input id="SignupButton" class="btn alt" type="submit" value="SIGN UP">
+                        </fieldset>
+                    </div></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
 

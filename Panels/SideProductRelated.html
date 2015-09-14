@@ -1,4 +1,3 @@
-%%Panel.RelatedProductJavaScript%%
 <div class="Block SideRelatedProducts Moveable Panel" style="display:%%GLOBAL_HideRelatedProductsPanel%%" id="SideProductRelated">
     <h2>Goes well with</h2>
     <div class="BlockContent">
@@ -9,3 +8,30 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#related-product-slider .slides').owlCarousel({
+            items : 3,
+            pagination : false,
+            autoPlay : true,
+            loop : true,
+            navigation : true,
+            navigationText: [
+                "<i class='flex-prev'><</i>",
+                "<i class='flex-next'>></i>"
+            ],
+            stopOnHover : true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1025:{
+                    items:3
+                }
+            }
+        });
+    });
+</script>

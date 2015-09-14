@@ -41,7 +41,7 @@
             showFilter();
         });
         function showFilter(){
-            if($(window).outerWidth() < 767){
+            if($(window).outerWidth(false) < 767){
                 $('.productlist-page .SubCategoryList').hide();
                 $('.productlist-page #SideCategoryShopByPrice').hide();
                 $('.productlist-page .Left h3').toggle(function(){
@@ -54,19 +54,13 @@
                     $('.productlist-page .SubCategoryList').hide();
                     $('.productlist-page #SideCategoryShopByPrice').hide();
                 });
-                $('.SubCategoryList span:contains("Category")').toggle(function(){
-                    $(this).addClass('showSub');
-                    $(this).next('ul').fadeIn('slow');
-                },function(){
-                    $(this).removeClass('showSub');
-                    $(this).next('ul').fadeOut('slow');
+                $('.SubCategoryList span:contains("Category")').click(function(){
+                    $(this).toggleClass('showSub');
+                    $(this).next('ul').slideToggle();
                 });
-                $('#SideCategoryShopByPrice > h4').toggle(function(){
-                    $(this).addClass('showSub');
-                    $(this).parent().find('.BlockContent').fadeIn('slow');
-                },function(){
-                    $(this).removeClass('showSub');
-                    $(this).parent().find('.BlockContent').fadeOut('slow');
+                $('#SideCategoryShopByPrice > h4').click(function(){
+                   $(this).toggleClass('showSub');
+                    $(this).parent().find('.BlockContent').slideToggle();
                 });
             }else {
                 $('.productlist-page .SubCategoryList').show();

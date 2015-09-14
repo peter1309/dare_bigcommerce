@@ -4,7 +4,9 @@
     <form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" onsubmit="return check_signup_form()">
         <div class="FormContainer">
             <fieldset>
-                <input type="email" title="" class="Textbox InitialFocus" name="signup" id="signup" placeholder="%%LNG_EmailAddress%%" />
+                <input type="email" title="" class="Textbox InitialFocus" name="signup" id="signup" 
+                   onclick="if(this.value=='%%LNG_EmailAddress%%'){this.value='';}" 
+                   onblur="if(this.value==''){this.value='%%LNG_EmailAddress%%';}" value="%%LNG_EmailAddress%%"/>
                 <input id="SignupButton" class="btn alt" type="submit" value="SIGN UP" />
             </fieldset>
             <!--fieldset class="actions">

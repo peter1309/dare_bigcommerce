@@ -149,7 +149,7 @@ input, select, textarea {
     float: left;
     width: 100%;
     max-height: 88px;
-    background: url(../images/cookie-sprite.png) repeat-x bottom;
+    background: url(%%GLOBAL_TPL_PATH%%/images/cookie-sprite.png) repeat-x bottom;
 }
 #cookieNotification .cookie-inner {
     max-width: 940px;
@@ -161,7 +161,7 @@ input, select, textarea {
     float: left;
     width: 40px;
     height: 40px;
-    background: url(../images/cookie-sprite.png) no-repeat 0 8px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/cookie-sprite.png) no-repeat 0 8px;
 }
 #cookieNotification p {
     margin: 0 0 0 0;
@@ -178,7 +178,7 @@ input, select, textarea {
     height: 28px;
     cursor: pointer;
     text-indent:  -9999px;
-    background: url(../images/cookie-sprite.png) no-repeat 0 -38px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/cookie-sprite.png) no-repeat 0 -38px;
     border: none;
 }
 @media screen and (max-width: 768px) {
@@ -241,7 +241,7 @@ input, select, textarea {
     border-radius: 0px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
-    background: url(../images/searchIcon.png) 50% 50% no-repeat transparent;
+    background: url(%%GLOBAL_TPL_PATH%%/images/searchIcon.png) 50% 50% no-repeat transparent;
     -moz-transition: background-color 150ms ease;
     -webkit-transition: background-color 150ms ease;
     -o-transition: background-color 150ms ease;
@@ -1167,7 +1167,7 @@ ul.side-menu > li {
 
 .Breadcrumb li a {
     padding-right: 18px;
-    background: url(../images/icon_bullet_breadcrumb.png) no-repeat 100% 50%;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_bullet_breadcrumb.png) no-repeat 100% 50%;
     display: inline-block;
     font-weight: bold;
 }
@@ -1855,7 +1855,7 @@ table.General tbody tr.First td {
 .selected-currency {
     cursor: pointer;
     padding: 10px 20px 10px 9px !important;
-    background: url(../images/icon_arrow_down.png) no-repeat 95% center;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_arrow_down.png) no-repeat 95% center;
 }
     .TopMenu .selected-currency {
         display: none;
@@ -2051,7 +2051,7 @@ a.ChangeLink {
 .SubBrandList li {
     margin-bottom: 4px;
     padding-left: 25px;
-    background: url('../images/SubBrand.gif') no-repeat 3px 50%;
+    background: url('%%GLOBAL_TPL_PATH%%/images/SubBrand.gif') no-repeat 3px 50%;
 }
 
 .SubBrandListGrid ul,
@@ -2113,7 +2113,7 @@ a.ChangeLink {
     color: #666;
     margin-top: 6px;
     padding-left: 22px;
-    background: url('../images/GiftWrappingAvailable.png') no-repeat;
+    background: url('%%GLOBAL_TPL_PATH%%/images/GiftWrappingAvailable.png') no-repeat;
     padding-bottom: 4px;
 }
 
@@ -2169,7 +2169,7 @@ p.AddCartButton {
     color: #666;
     margin-top: 6px;
     padding-left: 22px;
-    background: url('../images/GiftWrappingAvailable.png') no-repeat;
+    background: url('%%GLOBAL_TPL_PATH%%/images/GiftWrappingAvailable.png') no-repeat;
     padding-bottom: 4px;
     line-height: 1.6;
 }
@@ -2490,7 +2490,7 @@ ul.tabs li {
 }
 
 .VideoOverlay {
-    background-image: url('../images/VideoOverlay.png');
+    background-image: url('%%GLOBAL_TPL_PATH%%/images/VideoOverlay.png');
     background-position: center center;
     position: absolute;
     left: 0;
@@ -2648,7 +2648,7 @@ ul.tabs li {
     margin-left: 0px;
     top: -5px;
     padding: 0;
-    background: url(../images/nav_active.png) no-repeat center top;
+    background: url(%%GLOBAL_TPL_PATH%%/images/nav_active.png) no-repeat center top;
 }
 
 .PageMenu li ul:before {
@@ -2770,7 +2770,7 @@ ul.tabs li {
 }
 
 .PageMenu li ul li a.hasSub {
-    background: url(../images/sub.png) 100% 50% no-repeat;
+    background: url(%%GLOBAL_TPL_PATH%%/images/sub.png) 100% 50% no-repeat;
     padding-right: 20px;
 }
 
@@ -2992,7 +2992,7 @@ ul.AccountOrdersList {
 
 #recaptcha_reload_btn {
     display: block;
-    background: url(../images/recapRefresh.png) 0 0 no-repeat !important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/recapRefresh.png) 0 0 no-repeat !important;
 }
 
 #recaptcha_reload_btn img {
@@ -3001,7 +3001,7 @@ ul.AccountOrdersList {
 
 #recaptcha_switch_audio_btn {
     display: block;
-    background: url(../images/recapAudio.png) 0 0 no-repeat !important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/recapAudio.png) 0 0 no-repeat !important;
 }
 #recaptcha_switch_audio_btn img {
     visibility: hidden;
@@ -3009,7 +3009,7 @@ ul.AccountOrdersList {
 
 #recaptcha_whatsthis_btn {
     display: block;
-    background: url(../images/recapHelp.png) 0 0 no-repeat !important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/recapHelp.png) 0 0 no-repeat !important;
 }
 
 #recaptcha_whatsthis_btn img {
@@ -3041,7 +3041,7 @@ visibility: hidden;isibility: hidden;
 }
 
 #fancy_close {
-    background: url("../images/icon-close.png") no-repeat scroll 0 0 transparent !important;
+    background: url("%%GLOBAL_TPL_PATH%%/images/icon-close.png") no-repeat scroll 0 0 transparent !important;
     height: 11px !important;
     top: 10px !important;
     right: 10px !important;
@@ -3488,7 +3488,7 @@ a.ChangeLink {
     width: 20px;
     height: 20px;
     margin-top: 2px;
-    background: url(../images/icon_sprite.png) no-repeat -46px -46px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_sprite.png) no-repeat -46px -46px;
 }
 
 .SubTotal td {
@@ -3627,7 +3627,7 @@ a.ChangeLink {
     height: 14px;
     left: 0;
     top: 3px;
-    background: url(../images/icon-outofstock.png) no-repeat 0 0;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon-outofstock.png) no-repeat 0 0;
 }
 
 #prodAccordion {
@@ -3635,7 +3635,7 @@ a.ChangeLink {
 }
 
 #prodAccordion .current .subtitle {
-    background: url(../images/icon_arrow_down.png) no-repeat right center !important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_arrow_down.png) no-repeat right center !important;
 }
 
 #prodAccordion .subtitle {
@@ -3644,7 +3644,7 @@ a.ChangeLink {
     font-size: 16px !important;
     padding: 0 30px 0 0 !important;
     float: none;
-    background: url(../images/icon_arrow_left.png) no-repeat right center !important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_arrow_left.png) no-repeat right center !important;
     cursor: pointer;
 }
 
@@ -3742,7 +3742,7 @@ a.ChangeLink {
     text-indent: 999px;
     overflow: hidden;
     right: -10px!important;
-    background: url(../images/icon-close.png) no-repeat 0 0!important;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon-close.png) no-repeat 0 0!important;
 }
 
 #ModalTitle,
@@ -3921,7 +3921,7 @@ a.ChangeLink {
 }
 
 .footer .powered-by a {
-    background: url('../images/bc_logo_sprite.png') no-repeat;
+    background: url('%%GLOBAL_TPL_PATH%%/images/bc_logo_sprite.png') no-repeat;
     background-position: 0 -50px;
     height: 22px;
     width: 95px;
@@ -4084,8 +4084,8 @@ select.JSHidden {
 /* Over writes of defaults */
 
 .sf-menu a.sf-with-ul {
-    min-width: 0 !important;
-    padding-right: 0 !important;
+    min-width: 0;
+    padding-right: 0;
 }
 
 .product-nav {
@@ -4267,7 +4267,7 @@ div.checker span,
 div.radio span,
 div.button,
 div.button span {
-    background-image: url(../images/icon_sprite.png);
+    background-image: url(%%GLOBAL_TPL_PATH%%/images/icon_sprite.png);
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
 }
@@ -4546,7 +4546,7 @@ div.button span {
 /* Select */
 div.selector {
     font-size: 14px;
-    background: #fff url(../images/icon_arrow_down.png) no-repeat 90% center !important;
+    background: #fff url(%%GLOBAL_TPL_PATH%%/images/icon_arrow_down.png) no-repeat 90% center !important;
     height: 28px;
     line-height: 28px;
     min-height: 28px !important;
@@ -4735,7 +4735,7 @@ min-height: 30px;
     width: 18px;
     height: 21px;
     margin-right: 10px;
-    background: url(../images/icons_off.png) no-repeat -170px -152px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icons_off.png) no-repeat -170px -152px;
 }
 
 .icon-delete:hover,
@@ -4744,7 +4744,7 @@ min-height: 30px;
 #WishLists .txt-hide a:hover,
 #WishLists .txt-hide .icon-delete:hover,
 #WishLists .txt-hide .icon-edit:hover {
-    background: url(../images/icons_on.png) no-repeat -170px -152px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icons_on.png) no-repeat -170px -152px;
     background-color: transparent !important;
 }
 
@@ -4790,7 +4790,7 @@ ul{
 }
 
 ul ul ul{
-    list-style-image: url(../images/bullet_line.png);
+    list-style-image: url(%%GLOBAL_TPL_PATH%%/images/bullet_line.png);
 }
 
 .multiStep,
@@ -4822,7 +4822,7 @@ ul ul ul{
 }
 
 .multiStep li .icon  {
-    background: url("../images/nav_active.png") no-repeat;
+    background: url("%%GLOBAL_TPL_PATH%%/images/nav_active.png") no-repeat;
     display: block;
     float: left;
     height: 8px;
@@ -4852,7 +4852,7 @@ ul ul ul{
     display: inline-block;
     width: 16px;
     height: 14px;
-    background: url("../images/icon_sprite.png") no-repeat 0 -27px;
+    background: url("%%GLOBAL_TPL_PATH%%/images/icon_sprite.png") no-repeat 0 -27px;
 }
 
 .icon-add {
@@ -4928,7 +4928,7 @@ ul ul ul{
     margin: 12px 10px;
     text-indent: 99px;
     overflow: hidden;
-    background: url(../images/icon_sprite.png) no-repeat -42px -26px;
+    background: url(%%GLOBAL_TPL_PATH%%/images/icon_sprite.png) no-repeat -42px -26px;
 }
 
 .nav-next {
@@ -5128,14 +5128,14 @@ div#fancy_outer {
 }
 
 .flex-direction-nav .flex-prev {
-    background: url(../images/carousel-left-arrow.png) no-repeat center left;
+    background: url(%%GLOBAL_TPL_PATH%%/images/carousel-left-arrow.png) no-repeat center left;
     top: 0;
     left: 0 !important;
     bottom: 0;
     margin-top: -40px;
 }
 .flex-direction-nav .flex-next {
-    background: url(../images/carousel-right-arrow.png) no-repeat center right;
+    background: url(%%GLOBAL_TPL_PATH%%/images/carousel-right-arrow.png) no-repeat center right;
     top: 0;
     right: 0 !important;
     bottom: 0;
@@ -5198,7 +5198,7 @@ label.outStock span.name {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("../images/out-of-stock-bg.png") center no-repeat;
+    background: url("%%GLOBAL_TPL_PATH%%/images/out-of-stock-bg.png") center no-repeat;
     z-index: 999;
     content: "";
 }
@@ -5210,7 +5210,7 @@ label.outStock span.name {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("../images/out-of-stock-bg.png") center no-repeat;
+    background: url("%%GLOBAL_TPL_PATH%%/images/out-of-stock-bg.png") center no-repeat;
 }*/
 
 #ToggleMenu,

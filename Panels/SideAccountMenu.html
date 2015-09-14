@@ -1,15 +1,34 @@
 <div class="Block AccountMenu Moveable Panel" id="SideAccountMenu">
-	<h4>%%LNG_ManageYourAccount%%</h4>
-	<div class="BlockContent">
-		<ul class="side-menu">
-			<li style="display: %%GLOBAL_HideMessagesMenu%%"><a href="%%GLOBAL_ShopPath%%/account.php?action=inbox">%%LNG_ViewMessages%% <strong>(%%GLOBAL_NumNewMessages%%)</strong></a></li>
-			<li><a href="%%GLOBAL_ShopPath%%/account.php?action=order_status">%%LNG_ViewYourOrderStatus%%</a></li>
-			<li><a href="%%GLOBAL_ShopPath%%/account.php?action=view_orders">%%LNG_CompletedOrders%%</a></li>
-			<li style="display: %%GLOBAL_HideReturnRequestsMenu%%"><a href="%%GLOBAL_ShopPath%%/account.php?action=view_returns">%%LNG_ReturnRequests%%</a></li>
-			<li><a href="%%GLOBAL_ShopPath%%/account.php?action=address_book">%%LNG_YourAddressBook%%</a></li>
-			<li style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPath%%/wishlist.php">%%LNG_WishLists%% <strong>(%%GLOBAL_NumWishListItems%%)</strong></a></li>
-			<li><a href="%%GLOBAL_ShopPath%%/account.php?action=account_details">%%LNG_YourAccountDetails%%</a></li>
-			<li><a href="%%GLOBAL_ShopPath%%/account.php?action=recent_items">%%LNG_RecentlyViewedItems%%</a></li>
-		</ul>
-	</div>
+    <h4>%%LNG_ManageYourAccount%%</h4>
+    <div class="BlockContent">
+        <ul class="side-menu">
+            <li style="display: %%GLOBAL_HideMessagesMenu%%"><a href="%%GLOBAL_ShopPath%%/account.php?action=inbox">%%LNG_ViewMessages%% <strong>(%%GLOBAL_NumNewMessages%%)</strong></a></li>
+            <li><a href="%%GLOBAL_ShopPath%%/account.php?action=order_status">%%LNG_ViewYourOrderStatus%%</a></li>
+            <li><a href="%%GLOBAL_ShopPath%%/account.php?action=view_orders">%%LNG_CompletedOrders%%</a></li>
+            <li style="display: %%GLOBAL_HideReturnRequestsMenu%%"><a href="%%GLOBAL_ShopPath%%/account.php?action=view_returns">%%LNG_ReturnRequests%%</a></li>
+            <li><a href="%%GLOBAL_ShopPath%%/account.php?action=address_book">%%LNG_YourAddressBook%%</a></li>
+            <li style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPath%%/wishlist.php">%%LNG_WishLists%% <strong>(%%GLOBAL_NumWishListItems%%)</strong></a></li>
+            <li><a href="%%GLOBAL_ShopPath%%/account.php?action=account_details">%%LNG_YourAccountDetails%%</a></li>
+            <li><a href="%%GLOBAL_ShopPath%%/account.php?action=recent_items">%%LNG_RecentlyViewedItems%%</a></li>
+            <li>%%GLOBAL_LoginOrLogoutText%%</li>
+        </ul>
+    </div>
 </div>
+<script type="text/javascript">
+    $(window).load(function(){
+        var url = document.URL;
+        var pieces = url.split('?')[1];
+        if(pieces != undefined){
+            var nav = $('#SideAccountMenu .side-menu li a');
+            nav.each(function () {
+                var href = $(this).attr('href');
+                nav.parent().removeClass('current');
+                if(href == url){
+                    console.log(href);
+                    $(this).parent().addClass('current');
+                    return false;
+                }
+            });
+        }
+    });
+</script>
